@@ -1,0 +1,12 @@
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\bin\Debug\Calculator1.exe.config
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\bin\Debug\Calculator1.exe
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\bin\Debug\Calculator1.pdb
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\bin\Debug\vi\Calculator1.resources.dll
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.csprojResolveAssemblyReference.cache
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.frmCalculator.resources
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.Properties.Resources.resources
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.frmCalculator.vi.resources
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.csproj.GenerateResource.Cache
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\vi\Calculator1.resources.dll
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.exe
+D:\DUE 2.2020\TTNT\Calculator1\Calculator1\obj\Debug\Calculator1.pdb
