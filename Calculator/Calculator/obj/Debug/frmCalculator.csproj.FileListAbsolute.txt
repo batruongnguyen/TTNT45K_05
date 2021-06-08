@@ -1,0 +1,9 @@
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\bin\Debug\frmCalculator.exe.config
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\bin\Debug\frmCalculator.exe
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\bin\Debug\frmCalculator.pdb
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.csprojResolveAssemblyReference.cache
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.Calculator.resources
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.Properties.Resources.resources
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.csproj.GenerateResource.Cache
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.exe
+D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.pdb
