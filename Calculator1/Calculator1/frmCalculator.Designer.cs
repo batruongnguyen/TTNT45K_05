@@ -39,11 +39,12 @@
             this.btnNhan = new System.Windows.Forms.Button();
             this.btnChia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbPheptinh = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbPheptinh = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             resources.ApplyResources(this.txtSo1, "txtSo1");
             this.txtSo1.Name = "txtSo1";
+            this.txtSo1.TextChanged += new System.EventHandler(this.txtSo1_TextChanged);
             // 
             // txtSo2
             // 
@@ -115,6 +117,11 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lbPheptinh);
@@ -125,6 +132,11 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // lbPheptinh
+            // 
+            resources.ApplyResources(this.lbPheptinh, "lbPheptinh");
+            this.lbPheptinh.Name = "lbPheptinh";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtKQ);
@@ -134,6 +146,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnClear);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
@@ -141,15 +154,12 @@
             this.panel4.Name = "panel4";
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label1
+            // btnClear
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // lbPheptinh
-            // 
-            resources.ApplyResources(this.lbPheptinh, "lbPheptinh");
-            this.lbPheptinh.Name = "lbPheptinh";
+            resources.ApplyResources(this.btnClear, "btnClear");
+            this.btnClear.Name = "btnClear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmCalculator
             // 
@@ -190,6 +200,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbPheptinh;
+        private System.Windows.Forms.Button btnClear;
 
     }
 }

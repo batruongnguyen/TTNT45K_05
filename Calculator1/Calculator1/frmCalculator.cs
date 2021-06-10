@@ -94,14 +94,32 @@ namespace Calculator1
             String sSo2 = txtSo2.Text;
             decimal dSo2 = Convert.ToDecimal(sSo2);
 
-            decimal dKQ = dSo1 / dSo2;
-
-            txtKQ.Text = dKQ.ToString();
+            if (dSo2 == 0)
+            {
+                txtKQ.Text = "Không hợp lệ";
+            }
+            else
+            {
+                decimal dKQ = dSo1 / dSo2;
+                txtKQ.Text = dKQ.ToString();
+            }     
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtSo1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtSo1.Text = "";
+            txtSo2.Text = "";
+            txtKQ.Text = "";
         }
     }
 }
