@@ -68,6 +68,12 @@
     <Compile Include="frmQLDonHang.Designer.cs">
       <DependentUpon>frmQLDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQlyDonThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQlyDonThue.Designer.cs">
+      <DependentUpon>frmQlyDonThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLDonHang.resx">
       <DependentUpon>frmQLDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQlyDonThue.resx">
+      <DependentUpon>frmQlyDonThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

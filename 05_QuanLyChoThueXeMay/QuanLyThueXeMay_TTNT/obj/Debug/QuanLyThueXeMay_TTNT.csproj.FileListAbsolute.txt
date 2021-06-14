@@ -10,3 +10,4 @@ D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Deb
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.GenerateResource.Cache
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.exe
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.pdb
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmQlyDonThue.resources
