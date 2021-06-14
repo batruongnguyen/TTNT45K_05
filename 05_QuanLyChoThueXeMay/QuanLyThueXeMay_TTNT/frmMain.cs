@@ -55,5 +55,10 @@ namespace QuanLyThueXeMay_TTNT
             xe.MdiParent = this;
             xe.Show();
         }
+
+        private void thôngTinKHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

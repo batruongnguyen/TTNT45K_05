@@ -7,3 +7,12 @@ D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.Propert
 D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.csproj.GenerateResource.Cache
 D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.exe
 D:\KI HÈ\TTNT45K_05\frmCalculator\frmCalculator\obj\Debug\frmCalculator.pdb
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\bin\Debug\frmCalculator.exe.config
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\obj\Debug\frmCalculator.exe
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\obj\Debug\frmCalculator.pdb
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\bin\Debug\frmCalculator.exe
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\bin\Debug\frmCalculator.pdb
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\obj\Debug\frmCalculator.csprojResolveAssemblyReference.cache
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\obj\Debug\frmCalculator.Calculator.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\obj\Debug\frmCalculator.Properties.Resources.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\Calculator\Calculator\obj\Debug\frmCalculator.csproj.GenerateResource.Cache
