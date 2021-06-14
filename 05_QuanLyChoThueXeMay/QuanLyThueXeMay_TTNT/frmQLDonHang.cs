@@ -16,5 +16,10 @@ namespace QuanLyThueXeMay_TTNT
         {
             InitializeComponent();
         }
+
+        private void frmDonHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

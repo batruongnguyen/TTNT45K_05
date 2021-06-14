@@ -34,9 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 510);
+            this.ClientSize = new System.Drawing.Size(1040, 604);
             this.Name = "frmDonHang";
             this.Text = "Quản Lý Đơn Hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDonHang_Load);
             this.ResumeLayout(false);
 
         }
