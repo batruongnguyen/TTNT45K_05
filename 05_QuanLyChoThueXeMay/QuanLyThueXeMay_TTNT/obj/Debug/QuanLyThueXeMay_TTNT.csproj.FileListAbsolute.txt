@@ -10,6 +10,7 @@ D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Deb
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.GenerateResource.Cache
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.exe
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.pdb
+<<<<<<< HEAD
 C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.exe.config
 C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.exe
 C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.pdb
@@ -22,3 +23,6 @@ C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay
 C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmDonHang.resources
 C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.Properties.Resources.resources
 C:\Users\ADMIN\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.GenerateResource.Cache
+=======
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmQlyDonThue.resources
+>>>>>>> 8764f5ea358c8605c2f15d9bf3f921ce3fb3692d

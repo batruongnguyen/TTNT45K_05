@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyThueXeMay_TTNT
 {
-    public partial class frmDonHang : Form
+    public partial class frmQlyDonThue : Form
     {
-        public frmDonHang()
+        public frmQlyDonThue()
         {
             InitializeComponent();
-        }
-
-        private void frmDonHang_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
