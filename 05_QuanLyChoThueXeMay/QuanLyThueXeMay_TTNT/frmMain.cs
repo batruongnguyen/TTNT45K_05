@@ -60,5 +60,27 @@ namespace QuanLyThueXeMay_TTNT
         {
 
         }
+
+        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tìmKiếmToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thêmMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThanhToan khach = new frmThanhToan();
+            khach.MdiParent = this;
+            khach.Show();
+        }
     }
 }
