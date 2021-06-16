@@ -65,5 +65,10 @@ namespace QuanLyThueXeMay_TTNT
             khach.MdiParent = this;
             khach.Show();
         }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

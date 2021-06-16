@@ -1,4 +1,5 @@
-﻿namespace QuanLyThueXeMay_TTNT
+﻿
+namespace QuanLyThueXeMay_TTNT
 {
     partial class frmDonHang
     {
