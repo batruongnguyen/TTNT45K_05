@@ -70,5 +70,12 @@ namespace QuanLyThueXeMay_TTNT
         {
 
         }
+
+        private void thêmMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQlyDonThue khach = new frmQlyDonThue();
+            khach.MdiParent = this;
+            khach.Show();
+        }
     }
 }
