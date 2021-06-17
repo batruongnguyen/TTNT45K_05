@@ -43,3 +43,13 @@ D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.exe
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.pdb
 >>>>>>> 3b7657005450dcd244347d1ac6a5beda603443fa
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.pdb
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csprojResolveAssemblyReference.cache
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmMain.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyDonThue.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyKH.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyXe.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
