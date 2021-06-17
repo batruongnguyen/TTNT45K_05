@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyThueXeMay_TTNT
+namespace _7_TTNT45K_Nhom05
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace QuanLyThueXeMay_TTNT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQlyDonThue());
+            Application.Run(new frmMain());
         }
     }
 }

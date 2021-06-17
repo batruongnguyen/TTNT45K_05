@@ -1,7 +1,6 @@
-﻿
-namespace QuanLyThueXeMay_TTNT
+﻿namespace _7_TTNT45K_Nhom05
 {
-    partial class frmDonHang
+    partial class frmQuanLyXe
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +28,17 @@ namespace QuanLyThueXeMay_TTNT
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDonHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyXe));
             this.SuspendLayout();
             // 
-            // frmDonHang
+            // frmQuanLyXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 604);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmDonHang";
-            this.Text = "Quản Lý Đơn Hàng";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmDonHang_Load);
+            this.Name = "frmQuanLyXe";
+            this.Text = "frmQuanLyXe";
             this.ResumeLayout(false);
 
         }

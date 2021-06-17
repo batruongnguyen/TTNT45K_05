@@ -10,17 +10,17 @@ D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Deb
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.GenerateResource.Cache
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.exe
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.pdb
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.AssemblyReference.cache
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmXe.resources
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmKH.resources
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmMain.resources
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmDonHang.resources
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmThanhToan.resources
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.Properties.Resources.resources
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.GenerateResource.cache
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.exe
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.pdb
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.exe.config
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.exe
-C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.pdb
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmQlyDonThue.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.exe.config
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.exe
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.pdb
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.exe
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\bin\Debug\QuanLyThueXeMay_TTNT.pdb
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmXe.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmKH.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmMain.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmDonHang.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.frmQlyDonThue.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.Properties.Resources.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\QuanLyThueXeMay_TTNT\obj\Debug\QuanLyThueXeMay_TTNT.csproj.GenerateResource.Cache

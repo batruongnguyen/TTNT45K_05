@@ -44,9 +44,7 @@ namespace QuanLyThueXeMay_TTNT
 
         private void thêmToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmKH khach = new frmKH();
-            khach.MdiParent = this;
-            khach.Show();
+            
         }
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,24 +59,21 @@ namespace QuanLyThueXeMay_TTNT
 
         }
 
-        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void KHToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmKH khach = new frmKH();
+            khach.MdiParent = this;
+            khach.Show();
         }
 
-        private void tìmKiếmToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
         private void thêmMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThanhToan khach = new frmThanhToan();
+            frmQlyDonThue khach = new frmQlyDonThue();
             khach.MdiParent = this;
             khach.Show();
         }

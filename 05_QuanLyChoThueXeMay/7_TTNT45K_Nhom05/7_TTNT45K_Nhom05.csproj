@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{594FC6F1-2A88-4EFD-84A5-DE2FEF3186F4}</ProjectGuid>
+    <ProjectGuid>{3A776463-57E3-40C7-BC0A-77C1ABF938D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuanLyThueXeMay_TTNT</RootNamespace>
-    <AssemblyName>QuanLyThueXeMay_TTNT</AssemblyName>
+    <RootNamespace>_7_TTNT45K_Nhom05</RootNamespace>
+    <AssemblyName>7_TTNT45K_Nhom05</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,52 +44,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQLDonHang.cs">
+    <Compile Include="frmQuanLyDonThue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQLDonHang.Designer.cs">
-      <DependentUpon>frmQLDonHang.cs</DependentUpon>
+    <Compile Include="frmQuanLyDonThue.Designer.cs">
+      <DependentUpon>frmQuanLyDonThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQlyDonThue.cs">
+    <Compile Include="frmQuanLyKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQlyDonThue.Designer.cs">
-      <DependentUpon>frmQlyDonThue.cs</DependentUpon>
+    <Compile Include="frmQuanLyKH.Designer.cs">
+      <DependentUpon>frmQuanLyKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyXe.Designer.cs">
+      <DependentUpon>frmQuanLyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQLDonHang.resx">
-      <DependentUpon>frmQLDonHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyDonThue.resx">
+      <DependentUpon>frmQuanLyDonThue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQlyDonThue.resx">
-      <DependentUpon>frmQlyDonThue.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanLyKH.resx">
+      <DependentUpon>frmQuanLyKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyXe.resx">
+      <DependentUpon>frmQuanLyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,7 +99,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,12 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hinh-nen-mau-xanh-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iPad-Air-2020-gradient-wallpaper-idownloadblog-Sky-Blue-by-AR7-2-1536x1536-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

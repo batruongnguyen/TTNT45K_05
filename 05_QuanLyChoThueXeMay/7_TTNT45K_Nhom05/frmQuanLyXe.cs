@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyThueXeMay_TTNT
+namespace _7_TTNT45K_Nhom05
 {
-    public partial class frmDonHang : Form
+    public partial class frmQuanLyXe : Form
     {
-        public frmDonHang()
+        public frmQuanLyXe()
         {
             InitializeComponent();
-        }
-
-        private void frmDonHang_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
