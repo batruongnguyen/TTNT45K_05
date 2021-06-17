@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyThueXeMay_TTNT
+namespace _7_TTNT45K_Nhom05
 {
-    public partial class frmXe : Form
+    public partial class frmQuanLyXe : Form
     {
-        public frmXe()
+        public frmQuanLyXe()
         {
             InitializeComponent();
         }

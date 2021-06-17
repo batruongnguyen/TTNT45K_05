@@ -1,0 +1,26 @@
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe.config
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.pdb
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csprojResolveAssemblyReference.cache
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmMain.resources
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyDonThue.resources
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyKH.resources
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyXe.resources
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.exe
+D:\DUE 2.2020\TTNT\07_TTNT_Nhom05\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.pdb
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe.config
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.exe
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.pdb
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.pdb
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csprojResolveAssemblyReference.cache
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmMain.resources
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyDonThue.resources
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyKH.resources
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyXe.resources
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
+D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
