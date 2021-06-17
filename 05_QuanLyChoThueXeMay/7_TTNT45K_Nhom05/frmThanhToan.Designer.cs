@@ -1,7 +1,6 @@
-﻿
-namespace QuanLyThueXeMay_TTNT
+﻿namespace _7_TTNT45K_Nhom05
 {
-    partial class frmDonHang
+    partial class frmThanhToan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +28,19 @@ namespace QuanLyThueXeMay_TTNT
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDonHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThanhToan));
             this.SuspendLayout();
             // 
-            // frmDonHang
+            // frmThanhToan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 604);
+            this.ClientSize = new System.Drawing.Size(426, 401);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmDonHang";
-            this.Text = "Quản Lý Đơn Hàng";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmDonHang_Load);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "frmThanhToan";
+            this.Text = "frmThanhToan";
             this.ResumeLayout(false);
 
         }

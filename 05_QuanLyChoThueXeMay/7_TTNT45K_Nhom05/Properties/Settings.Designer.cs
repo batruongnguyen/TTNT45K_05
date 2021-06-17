@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyThueXeMay_TTNT.Properties
+namespace _7_TTNT45K_Nhom05.Properties
 {
 
 
