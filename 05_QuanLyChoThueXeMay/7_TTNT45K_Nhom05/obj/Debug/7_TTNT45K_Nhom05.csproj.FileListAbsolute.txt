@@ -24,3 +24,16 @@ D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQu
 D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
 D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
 D:\DUE 2.2020\TTNT\New folder\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe.config
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.exe
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.pdb
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.pdb
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmMain.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyDonThue.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyKH.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyXe.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
+C:\Users\Dell\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
