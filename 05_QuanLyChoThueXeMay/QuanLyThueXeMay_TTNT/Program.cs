@@ -16,7 +16,7 @@ namespace QuanLyThueXeMay_TTNT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQlyDonThue());
+            Application.Run(new frmMain());
         }
     }
 }
