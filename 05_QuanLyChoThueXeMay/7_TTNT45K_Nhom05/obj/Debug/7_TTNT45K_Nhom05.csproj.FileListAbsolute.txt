@@ -53,3 +53,16 @@ D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
 D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe.config
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.exe
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.pdb
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.exe
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\bin\Debug\7_TTNT45K_Nhom05.pdb
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csprojResolveAssemblyReference.cache
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmMain.resources
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyDonThue.resources
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyKH.resources
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyXe.resources
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
+C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
