@@ -36,5 +36,10 @@ namespace _7_TTNT45K_Nhom05
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
