@@ -172,7 +172,7 @@
             this.btnTimkiemKH.Location = new System.Drawing.Point(610, 27);
             this.btnTimkiemKH.Name = "btnTimkiemKH";
             this.btnTimkiemKH.Size = new System.Drawing.Size(113, 33);
-            this.btnTimkiemKH.TabIndex = 8;
+            this.btnTimkiemKH.TabIndex = 7;
             this.btnTimkiemKH.Text = "Tìm kiếm";
             this.btnTimkiemKH.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +182,7 @@
             this.txtTimkiemKH.Location = new System.Drawing.Point(213, 29);
             this.txtTimkiemKH.Name = "txtTimkiemKH";
             this.txtTimkiemKH.Size = new System.Drawing.Size(324, 31);
-            this.txtTimkiemKH.TabIndex = 7;
+            this.txtTimkiemKH.TabIndex = 6;
             // 
             // label5
             // 

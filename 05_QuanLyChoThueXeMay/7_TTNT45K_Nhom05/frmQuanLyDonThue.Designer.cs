@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyDonThue));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
@@ -49,9 +52,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -89,23 +89,49 @@
             this.groupBox2.Location = new System.Drawing.Point(70, 41);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(753, 289);
-            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đăng ký Thuê";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(208, 82);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(299, 31);
+            this.textBox3.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 25);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Mã đơn thuê";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(582, 129);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 34);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Sửa";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(208, 204);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(299, 31);
-            this.textBox2.TabIndex = 19;
+            this.textBox2.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(208, 160);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(299, 31);
-            this.textBox1.TabIndex = 18;
+            this.textBox1.TabIndex = 3;
             // 
             // txtTen
             // 
@@ -165,7 +191,7 @@
             this.cbLoaixe.Location = new System.Drawing.Point(208, 121);
             this.cbLoaixe.Name = "cbLoaixe";
             this.cbLoaixe.Size = new System.Drawing.Size(299, 33);
-            this.cbLoaixe.TabIndex = 1;
+            this.cbLoaixe.TabIndex = 2;
             this.cbLoaixe.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateTimePicker1
@@ -174,7 +200,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(208, 245);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 29);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label6
@@ -267,32 +293,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(677, 278);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(582, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 34);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 25);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Mã đơn thuê";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(208, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(299, 31);
-            this.textBox3.TabIndex = 22;
             // 
             // frmQuanLyDonThue
             // 
