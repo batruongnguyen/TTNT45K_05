@@ -16,5 +16,15 @@ namespace _7_TTNT45K_Nhom05
         {
             InitializeComponent();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntTinhTien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

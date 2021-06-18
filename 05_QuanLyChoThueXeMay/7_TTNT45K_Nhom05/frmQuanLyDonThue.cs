@@ -16,5 +16,10 @@ namespace _7_TTNT45K_Nhom05
         {
             InitializeComponent();
         }
+
+        private void frmQuanLyDonThue_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
