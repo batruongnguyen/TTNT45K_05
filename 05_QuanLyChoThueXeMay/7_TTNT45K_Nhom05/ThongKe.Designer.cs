@@ -64,6 +64,10 @@
             // 
             this.cbTinhTrangXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTinhTrangXe.FormattingEnabled = true;
+            this.cbTinhTrangXe.Items.AddRange(new object[] {
+            "Đang cho thuê",
+            "Sẵn có",
+            "Hỏng"});
             this.cbTinhTrangXe.Location = new System.Drawing.Point(201, 84);
             this.cbTinhTrangXe.Name = "cbTinhTrangXe";
             this.cbTinhTrangXe.Size = new System.Drawing.Size(297, 33);

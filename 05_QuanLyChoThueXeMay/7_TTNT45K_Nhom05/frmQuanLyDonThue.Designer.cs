@@ -34,9 +34,7 @@
             this.txtTen = new System.Windows.Forms.TextBox();
             this.btnThemDT = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbMaxe = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbTenxe = new System.Windows.Forms.ComboBox();
             this.btnXoaDT = new System.Windows.Forms.Button();
             this.cbLoaixe = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,6 +47,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,12 +67,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.txtTen);
             this.groupBox2.Controls.Add(this.btnThemDT);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cbMaxe);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cbTenxe);
             this.groupBox2.Controls.Add(this.btnXoaDT);
             this.groupBox2.Controls.Add(this.cbLoaixe);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -115,15 +115,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Họ và tên";
             // 
-            // cbMaxe
-            // 
-            this.cbMaxe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaxe.FormattingEnabled = true;
-            this.cbMaxe.Location = new System.Drawing.Point(220, 179);
-            this.cbMaxe.Name = "cbMaxe";
-            this.cbMaxe.Size = new System.Drawing.Size(299, 33);
-            this.cbMaxe.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -133,15 +124,6 @@
             this.label2.Size = new System.Drawing.Size(71, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Mã xe";
-            // 
-            // cbTenxe
-            // 
-            this.cbTenxe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTenxe.FormattingEnabled = true;
-            this.cbTenxe.Location = new System.Drawing.Point(220, 130);
-            this.cbTenxe.Name = "cbTenxe";
-            this.cbTenxe.Size = new System.Drawing.Size(299, 33);
-            this.cbTenxe.TabIndex = 2;
             // 
             // btnXoaDT
             // 
@@ -157,6 +139,9 @@
             // 
             this.cbLoaixe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaixe.FormattingEnabled = true;
+            this.cbLoaixe.Items.AddRange(new object[] {
+            "Xe máy",
+            "Xe đạp"});
             this.cbLoaixe.Location = new System.Drawing.Point(220, 87);
             this.cbLoaixe.Name = "cbLoaixe";
             this.cbLoaixe.Size = new System.Drawing.Size(299, 33);
@@ -263,6 +248,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(677, 278);
             this.dataGridView1.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(220, 138);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(299, 31);
+            this.textBox1.TabIndex = 18;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(220, 182);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(299, 31);
+            this.textBox2.TabIndex = 19;
+            // 
             // frmQuanLyDonThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,14 +301,14 @@
         private System.Windows.Forms.TextBox txtTimKiemDT;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnThemDT;
-        private System.Windows.Forms.ComboBox cbTenxe;
         private System.Windows.Forms.ComboBox cbLoaixe;
-        private System.Windows.Forms.ComboBox cbMaxe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

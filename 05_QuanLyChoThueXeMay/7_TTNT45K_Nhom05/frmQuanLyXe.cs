@@ -41,5 +41,10 @@ namespace _7_TTNT45K_Nhom05
         {
 
         }
+
+        private void cbTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
