@@ -66,3 +66,4 @@ C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nho
 C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThanhToan.resources
 C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
 C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
+D:\DUE 2.2020\TTNT\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThongKe.resources

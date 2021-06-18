@@ -31,5 +31,15 @@ namespace _7_TTNT45K_Nhom05
         {
 
         }
+
+        private void Chung_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
