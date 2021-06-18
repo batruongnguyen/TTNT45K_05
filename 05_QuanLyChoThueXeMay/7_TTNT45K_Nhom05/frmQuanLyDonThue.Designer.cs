@@ -98,7 +98,7 @@
             this.txtMaKH.Location = new System.Drawing.Point(147, 97);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(156, 26);
-            this.txtMaKH.TabIndex = 7;
+            this.txtMaKH.TabIndex = 2;
             // 
             // label5
             // 
@@ -116,7 +116,7 @@
             this.txtSoDT.Location = new System.Drawing.Point(147, 140);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(156, 26);
-            this.txtSoDT.TabIndex = 5;
+            this.txtSoDT.TabIndex = 3;
             // 
             // txtTenKH
             // 
@@ -124,7 +124,7 @@
             this.txtTenKH.Location = new System.Drawing.Point(147, 65);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(216, 26);
-            this.txtTenKH.TabIndex = 4;
+            this.txtTenKH.TabIndex = 1;
             // 
             // txtMaHD
             // 
@@ -132,7 +132,7 @@
             this.txtMaHD.Location = new System.Drawing.Point(147, 30);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(142, 26);
-            this.txtMaHD.TabIndex = 3;
+            this.txtMaHD.TabIndex = 0;
             // 
             // label4
             // 
@@ -188,7 +188,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(193, 131);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(299, 26);
-            this.dateTimePicker2.TabIndex = 16;
+            this.dateTimePicker2.TabIndex = 7;
             // 
             // dateTimePicker1
             // 
@@ -196,7 +196,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(193, 91);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // txtTenX
             // 
@@ -204,7 +204,7 @@
             this.txtTenX.Location = new System.Drawing.Point(193, 59);
             this.txtTenX.Name = "txtTenX";
             this.txtTenX.Size = new System.Drawing.Size(133, 26);
-            this.txtTenX.TabIndex = 14;
+            this.txtTenX.TabIndex = 5;
             // 
             // txtMaX
             // 
@@ -212,7 +212,7 @@
             this.txtMaX.Location = new System.Drawing.Point(193, 28);
             this.txtMaX.Name = "txtMaX";
             this.txtMaX.Size = new System.Drawing.Size(122, 26);
-            this.txtMaX.TabIndex = 13;
+            this.txtMaX.TabIndex = 4;
             // 
             // label9
             // 
@@ -260,7 +260,7 @@
             this.bntTimKiem.Location = new System.Drawing.Point(338, 280);
             this.bntTimKiem.Name = "bntTimKiem";
             this.bntTimKiem.Size = new System.Drawing.Size(128, 40);
-            this.bntTimKiem.TabIndex = 9;
+            this.bntTimKiem.TabIndex = 8;
             this.bntTimKiem.Text = "Tìm kiếm";
             this.bntTimKiem.UseVisualStyleBackColor = true;
             // 
@@ -270,7 +270,7 @@
             this.bntXoa.Location = new System.Drawing.Point(482, 280);
             this.bntXoa.Name = "bntXoa";
             this.bntXoa.Size = new System.Drawing.Size(125, 40);
-            this.bntXoa.TabIndex = 10;
+            this.bntXoa.TabIndex = 9;
             this.bntXoa.Text = "Xóa";
             this.bntXoa.UseVisualStyleBackColor = true;
             // 
@@ -290,7 +290,7 @@
             this.txtDonGia.Location = new System.Drawing.Point(407, 332);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(236, 26);
-            this.txtDonGia.TabIndex = 12;
+            this.txtDonGia.TabIndex = 10;
             // 
             // label11
             // 
@@ -308,7 +308,7 @@
             this.textBox1.Location = new System.Drawing.Point(407, 369);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 26);
-            this.textBox1.TabIndex = 14;
+            this.textBox1.TabIndex = 11;
             // 
             // bntThemDT
             // 
@@ -316,7 +316,7 @@
             this.bntThemDT.Location = new System.Drawing.Point(686, 308);
             this.bntThemDT.Name = "bntThemDT";
             this.bntThemDT.Size = new System.Drawing.Size(130, 31);
-            this.bntThemDT.TabIndex = 15;
+            this.bntThemDT.TabIndex = 12;
             this.bntThemDT.Text = "Thêm đơn thuê";
             this.bntThemDT.UseVisualStyleBackColor = true;
             // 
@@ -326,7 +326,7 @@
             this.bntDong.Location = new System.Drawing.Point(839, 369);
             this.bntDong.Name = "bntDong";
             this.bntDong.Size = new System.Drawing.Size(123, 27);
-            this.bntDong.TabIndex = 16;
+            this.bntDong.TabIndex = 15;
             this.bntDong.Text = "Đóng";
             this.bntDong.UseVisualStyleBackColor = true;
             // 
@@ -336,7 +336,7 @@
             this.bntHuyDT.Location = new System.Drawing.Point(686, 364);
             this.bntHuyDT.Name = "bntHuyDT";
             this.bntHuyDT.Size = new System.Drawing.Size(130, 31);
-            this.bntHuyDT.TabIndex = 17;
+            this.bntHuyDT.TabIndex = 14;
             this.bntHuyDT.Text = "Hủy đơn thuê";
             this.bntHuyDT.UseVisualStyleBackColor = true;
             // 
@@ -346,7 +346,7 @@
             this.bntLuu.Location = new System.Drawing.Point(839, 308);
             this.bntLuu.Name = "bntLuu";
             this.bntLuu.Size = new System.Drawing.Size(123, 31);
-            this.bntLuu.TabIndex = 18;
+            this.bntLuu.TabIndex = 13;
             this.bntLuu.Text = "Lưu đơn thuê";
             this.bntLuu.UseVisualStyleBackColor = true;
             // 
