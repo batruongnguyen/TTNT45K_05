@@ -8,26 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyThueXeMay_TTNT
+namespace _7_TTNT45K_Nhom05
 {
-    public partial class frmKH : Form
+    public partial class frmThongKe : Form
     {
-        public frmKH()
+        public frmThongKe()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtTim_TextChanged(object sender, EventArgs e)
+        private void cbTinhTrangXe_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
