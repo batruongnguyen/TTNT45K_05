@@ -83,17 +83,32 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            command = connection.CreateCommand();
+            command.CommandText = "insert into XE values('"+txtMaXe.Text+"','"+cbTinhTrang.Text+"','"+txtMoTa.Text+"', '"+cbLoaiXe.Text+"','"+txtDonGia.Text+"')";
+            command.ExecuteNonQuery();
+            loaddata();
+
+
+ 
 
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            command = connection.CreateCommand();
+            command.CommandText = "delete from XE where MaX='" + txtMaXe.Text + "'";
+            command.ExecuteNonQuery();
+            loaddata();
 
 
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            command = connection.CreateCommand();
+            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "','" + txtMoTa.Text + "','" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";
+            command.ExecuteNonQuery();
+            loaddata();
 
 
         }
@@ -105,6 +120,14 @@ namespace _7_TTNT45K_Nhom05
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtMaXe.ReadOnly = true;
+            int i;
+            i = dgv.CurrentRow.Index;
+            txtMaXe.Text = dgv.Rows[i].Cells[0].Value.ToString();
+            cbTinhTrang.Text = dgv.Rows[i].Cells[1].Value.ToString();
+            txtMoTa.Text = dgv.Rows[i].Cells[2].Value.ToString();
+            cbLoaiXe.Text = dgv.Rows[i].Cells[3].Value.ToString();
+            txtDonGia.Text = dgv.Rows[i].Cells[4].Value.ToString();
 
         }
     }
