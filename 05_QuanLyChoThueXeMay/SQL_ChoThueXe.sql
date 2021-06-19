@@ -25,3 +25,7 @@ Add constraint FK_XE foreign key (MaX) references XE(MaX)
 
 alter Table THUE
 Add constraint FK_KHACH foreign key (SoDT) references KHACH(SoDT)
+
+select*from XE
+select*from THUE
+select*from KHACH
