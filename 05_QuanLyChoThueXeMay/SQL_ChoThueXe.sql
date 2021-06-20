@@ -47,7 +47,7 @@ values ('0905111', 'Nguyen A', 'P01'),
 ('0905113', 'Nguyen C', 'P03'),
 ('0905114', 'Nguyen D', 'P04')
 
-drop table THUE
+drop table KHACH
 
 select*from XE
 select*from THUE
