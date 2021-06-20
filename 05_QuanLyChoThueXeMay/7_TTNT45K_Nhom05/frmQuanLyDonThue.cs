@@ -224,6 +224,11 @@ namespace _7_TTNT45K_Nhom05
 
         }
 
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
