@@ -36,5 +36,10 @@ namespace _7_TTNT45K_Nhom05
         {
 
         }
+
+        private void txtDonGia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
