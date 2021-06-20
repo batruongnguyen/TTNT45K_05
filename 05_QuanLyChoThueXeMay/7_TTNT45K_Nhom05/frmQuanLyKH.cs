@@ -31,5 +31,10 @@ namespace _7_TTNT45K_Nhom05
         {
 
         }
+
+        private void btnThemKH_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
