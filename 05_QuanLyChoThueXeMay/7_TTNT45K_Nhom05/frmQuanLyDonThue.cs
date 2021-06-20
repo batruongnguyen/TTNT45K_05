@@ -89,11 +89,11 @@ namespace _7_TTNT45K_Nhom05
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
-            string sHoTen = txtTen.Text;
+            string sHoTen = txtSDT.Text;
             string sMaDT = txtMaDT.Text;
             string sDamBao = cbDamBao.Text;
             string sMaXe = txtMaXe.Text;
-            string sNgayThue = dateTimePicker1.Value.ToString("MM-dd-yyyy");
+            string sNgayThue = NgayThue.Value.ToString("MM-dd-yyyy");
             string sQuery = "update cho_thue_xe set TenKH = @TenKH, MaDT = @MaDT, " + "DamBao = @DamBao, NgayThue = @NgayThue" + "where MaXe=@MaXe";
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@TenKH", sHoTen);
@@ -124,11 +124,11 @@ namespace _7_TTNT45K_Nhom05
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
-            string sHoTen = txtTen.Text;
+            string sHoTen = txtSDT.Text;
             string sMaDT = txtMaDT.Text;
             string sDamBao = cbDamBao.Text;
             string sMaXe = txtMaXe.Text;
-            string sNgayThue = dateTimePicker1.Value.ToString("MM-dd-yyyy");
+            string sNgayThue = NgayThue.Value.ToString("MM-dd-yyyy");
             string sQuery = "insert into QUAN_LY_CHO_THUE_XE values(@TenKH, @MaDT, @DamBao, @MaXe, @NgayThue)";
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@TenKH", sHoTen);
@@ -150,11 +150,11 @@ namespace _7_TTNT45K_Nhom05
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTen.Text = dataGridView1.Rows[e.RowIndex].Cells["TenKH"].Value.ToString();
+            txtSDT.Text = dataGridView1.Rows[e.RowIndex].Cells["TenKH"].Value.ToString();
             txtMaDT.Text = dataGridView1.Rows[e.RowIndex].Cells["MaDT"].Value.ToString();
             cbDamBao.Text = dataGridView1.Rows[e.RowIndex].Cells["DamBao"].Value.ToString();
             txtMaXe.Text = dataGridView1.Rows[e.RowIndex].Cells["MaXe"].Value.ToString();
-            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
+            NgayThue.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -169,11 +169,11 @@ namespace _7_TTNT45K_Nhom05
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
-            string sHoTen = txtTen.Text;
+            string sHoTen = txtSDT.Text;
             string sMaDT = txtMaDT.Text;
             string sDamBao = cbDamBao.Text;
             string sMaXe = txtMaXe.Text;
-            string sNgayThue = dateTimePicker1.Value.ToString("MM-dd-yyyy");
+            string sNgayThue = NgayThue.Value.ToString("MM-dd-yyyy");
             string sQuery = "delete cho_thue_xe where MaXe = @MaXe";
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@TenKH", sHoTen);
@@ -204,7 +204,7 @@ namespace _7_TTNT45K_Nhom05
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
-            string Squery = "select*from KHACH where Ten like N'%" + txtTimKiem.Text + "%'";
+            string Squery = "select*from KHACH where Ten like N'%" + txtThanhTien.Text + "%'";
             SqlDataAdapter adapter = new SqlDataAdapter(Squery, con);
             DataSet ds = new DataSet();
             try
