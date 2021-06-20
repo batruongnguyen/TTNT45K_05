@@ -11,7 +11,7 @@ create table KHACH(SoDT varchar(15) not null primary key,
 Ten nvarchar(100) not null,
 DiaChi nvarchar(100) not null)
 
-create table THUE(SoDT varchar(15) not null,
+create table THUE(SoDT varchar(15) not null primary key,
 MaX varchar(5) not null,
 DamBao nvarchar(50) not null,
 NgayThue date, GioThue time, NgayTra date, GioTra time,
