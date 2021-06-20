@@ -11,15 +11,15 @@ create table KHACH(SoDT varchar(15) not null primary key,
 Ten nvarchar(100) not null,
 DiaChi nvarchar(100) not null)
 
-create table THUE(SoDT varchar(15) not null primary key,
+create table THUE(SoDT varchar(15) not null ,
 MaX varchar(5) not null,
 DamBao nvarchar(50) not null,
 NgayThue date, GioThue time, NgayTra date, GioTra time,
 ThoiGianThue int,
 ThanhTien int)
 
-constraint PK_THUE primary key clustered (SoDT ASC, MaX ASC) 
-With (PAD_Index=off, statistics_norecompute=off, ignore_dup_key=off,ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]) ON [PRIMARY]
+alter table THUE
+add constraint PK_THUE Primary Key (MaX,SoDT);
 
 alter Table THUE
 Add constraint FK_XE foreign key (MaX) references XE(MaX)
@@ -47,7 +47,7 @@ values ('0905111', 'Nguyen A', 'P01'),
 ('0905113', 'Nguyen C', 'P03'),
 ('0905114', 'Nguyen D', 'P04')
 
-drop table THUE
+drop table KHACH
 
 select*from XE
 select*from THUE
