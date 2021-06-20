@@ -35,7 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtMaXe = new System.Windows.Forms.TextBox();
-            this.txtTenXe = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbDamBao = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,11 +74,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.cbDamBao);
             this.groupBox2.Controls.Add(this.txtMaDT);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.txtMaXe);
-            this.groupBox2.Controls.Add(this.txtTenXe);
             this.groupBox2.Controls.Add(this.txtTen);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Controls.Add(this.label3);
@@ -135,14 +135,6 @@
             this.txtMaXe.Name = "txtMaXe";
             this.txtMaXe.Size = new System.Drawing.Size(299, 31);
             this.txtMaXe.TabIndex = 4;
-            // 
-            // txtTenXe
-            // 
-            this.txtTenXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtTenXe.Location = new System.Drawing.Point(208, 145);
-            this.txtTenXe.Name = "txtTenXe";
-            this.txtTenXe.Size = new System.Drawing.Size(299, 31);
-            this.txtTenXe.TabIndex = 3;
             // 
             // txtTen
             // 
@@ -242,9 +234,10 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(56, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 25);
+            this.label7.Size = new System.Drawing.Size(98, 25);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Tên xe";
+            this.label7.Text = "Đảm bảo";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -326,6 +319,18 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // cbDamBao
+            // 
+            this.cbDamBao.FormattingEnabled = true;
+            this.cbDamBao.Items.AddRange(new object[] {
+            "Tiền mặt",
+            "CMT",
+            "Thẻ căn cước"});
+            this.cbDamBao.Location = new System.Drawing.Point(208, 143);
+            this.cbDamBao.Name = "cbDamBao";
+            this.cbDamBao.Size = new System.Drawing.Size(299, 33);
+            this.cbDamBao.TabIndex = 22;
+            // 
             // frmQuanLyDonThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,9 +380,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtMaXe;
-        private System.Windows.Forms.TextBox txtTenXe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtMaDT;
+        private System.Windows.Forms.ComboBox cbDamBao;
     }
 }

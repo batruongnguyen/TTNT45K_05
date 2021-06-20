@@ -91,14 +91,14 @@ namespace _7_TTNT45K_Nhom05
             }
             string sHoTen = txtTen.Text;
             string sMaDT = txtMaDT.Text;
-            string sTenXe = txtTenXe.Text;
+            string sDamBao = cbDamBao.Text;
             string sMaXe = txtMaXe.Text;
             string sNgayThue = dateTimePicker1.Value.ToString("MM-dd-yyyy");
-            string sQuery = "update cho_thue_xe set TenKH = @TenKH, MaDT = @MaDT, " + "TenXe = @TenXe, NgayThue = @NgayThue" + "where MaXe=@MaXe";
+            string sQuery = "update cho_thue_xe set TenKH = @TenKH, MaDT = @MaDT, " + "DamBao = @DamBao, NgayThue = @NgayThue" + "where MaXe=@MaXe";
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@TenKH", sHoTen);
             cmd.Parameters.AddWithValue("@MaDT", sMaDT);
-            cmd.Parameters.AddWithValue("@TenXe", sTenXe);
+            cmd.Parameters.AddWithValue("@DamBao", sDamBao);
             cmd.Parameters.AddWithValue("@MaXe", sNgayThue);
             cmd.Parameters.AddWithValue("@NgayThue", sNgayThue);
             try
@@ -126,14 +126,14 @@ namespace _7_TTNT45K_Nhom05
             }
             string sHoTen = txtTen.Text;
             string sMaDT = txtMaDT.Text;
-            string sTenXe = txtTenXe.Text;
+            string sDamBao = cbDamBao.Text;
             string sMaXe = txtMaXe.Text;
             string sNgayThue = dateTimePicker1.Value.ToString("MM-dd-yyyy");
-            string sQuery = "insert into QUAN_LY_CHO_THUE_XE values(@TenKH, @MaDT, @TenXe, @MaXe, @NgayThue)";
+            string sQuery = "insert into QUAN_LY_CHO_THUE_XE values(@TenKH, @MaDT, @DamBao, @MaXe, @NgayThue)";
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@TenKH", sHoTen);
             cmd.Parameters.AddWithValue("@MaDT", sMaDT);
-            cmd.Parameters.AddWithValue("@TenXe", sTenXe);
+            cmd.Parameters.AddWithValue("@DamBao", sDamBao);
             cmd.Parameters.AddWithValue("@MaXe", sNgayThue);
             cmd.Parameters.AddWithValue("@NgayThue", sNgayThue);
             try
@@ -152,7 +152,7 @@ namespace _7_TTNT45K_Nhom05
         {
             txtTen.Text = dataGridView1.Rows[e.RowIndex].Cells["TenKH"].Value.ToString();
             txtMaDT.Text = dataGridView1.Rows[e.RowIndex].Cells["MaDT"].Value.ToString();
-            txtTenXe.Text = dataGridView1.Rows[e.RowIndex].Cells["TenXe"].Value.ToString();
+            cbDamBao.Text = dataGridView1.Rows[e.RowIndex].Cells["DamBao"].Value.ToString();
             txtMaXe.Text = dataGridView1.Rows[e.RowIndex].Cells["MaXe"].Value.ToString();
             dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
         }
@@ -171,14 +171,14 @@ namespace _7_TTNT45K_Nhom05
             }
             string sHoTen = txtTen.Text;
             string sMaDT = txtMaDT.Text;
-            string sTenXe = txtTenXe.Text;
+            string sDamBao = cbDamBao.Text;
             string sMaXe = txtMaXe.Text;
             string sNgayThue = dateTimePicker1.Value.ToString("MM-dd-yyyy");
             string sQuery = "delete cho_thue_xe where MaXe = @MaXe";
             SqlCommand cmd = new SqlCommand(sQuery, con);
             cmd.Parameters.AddWithValue("@TenKH", sHoTen);
             cmd.Parameters.AddWithValue("@MaDT", sMaDT);
-            cmd.Parameters.AddWithValue("@TenXe", sTenXe);
+            cmd.Parameters.AddWithValue("@DamBao", sDamBao);
             cmd.Parameters.AddWithValue("@MaXe", sNgayThue);
             cmd.Parameters.AddWithValue("@NgayThue", sNgayThue);
             try
@@ -217,6 +217,11 @@ namespace _7_TTNT45K_Nhom05
             }
             dataGridView1.DataSource = ds.Tables["THUE"];
             con.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
 
         
