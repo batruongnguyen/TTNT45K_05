@@ -54,5 +54,10 @@ namespace _7_TTNT45K_Nhom05
         {
           
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
