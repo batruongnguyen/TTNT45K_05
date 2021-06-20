@@ -33,7 +33,9 @@ namespace _7_TTNT45K_Nhom05
 
         private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmThongKe khach = new frmThongKe();
+            khach.MdiParent = this;
+            khach.Show();
         }
 
         private void quảnLýĐơnThuêToolStripMenuItem_Click(object sender, EventArgs e)
