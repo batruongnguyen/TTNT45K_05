@@ -14,7 +14,7 @@ namespace _7_TTNT45K_Nhom05
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
@@ -59,6 +59,16 @@ namespace _7_TTNT45K_Nhom05
             command = connection.CreateCommand();
             command.CommandText = "insert into KHACH values('" + txtSDT.Text + "','" + txtTen.Text + "','" + txtDiachi.Text+"')";
             command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!");
+
+            }
             loaddata();
         }
 
@@ -67,7 +77,18 @@ namespace _7_TTNT45K_Nhom05
             command = connection.CreateCommand();
             command.CommandText = "delete from KHACH where SoDT='" + txtSDT.Text + "'";
             command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Xóa thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!");
+
+            }
             loaddata();
+
         }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,6 +99,52 @@ namespace _7_TTNT45K_Nhom05
             txtSDT.Text = dgv1.Rows[i].Cells[0].Value.ToString();
             txtTen.Text = dgv1.Rows[i].Cells[1].Value.ToString();
             txtDiachi.Text = dgv1.Rows[i].Cells[2].Value.ToString();
+
+        }
+
+        private void btnSuaKH_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "update KHACH set Ten=N'" + txtTen.Text + "',DiaChi='" + txtDiachi.Text + "'where SoDT='"+txtSDT.Text+"'";
+            command.ExecuteNonQuery();
+
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Cập nhật thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!");
+
+            }    
+            loaddata();
+
+        }
+
+        private void btnTimkiemKH_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM KHACH WHERE SoDT LIKE N'%" + txtSDT + "%'", connection);
+            DataSet ds = new DataSet();
+            adapter.Fill(table);    
+            if (ds.Tables["KHACH"].Rows.Count > 0)
+            {
+            dgv1.DataSource = ds.Tables["KHACH"];
+            }
+            else
+            {
+            MessageBox.Show("Không tìm thấy khách hàng có thông tin phù hợp!");
+            txtTimkiemKH.Text = "";
+            }
+            loaddata();
+            connection.Close();
+            
+
+        }
+
+
+
 
         }
     }

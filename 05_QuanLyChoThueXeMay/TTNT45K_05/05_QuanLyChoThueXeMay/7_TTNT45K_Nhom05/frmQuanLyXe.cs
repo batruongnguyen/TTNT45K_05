@@ -12,9 +12,10 @@ namespace _7_TTNT45K_Nhom05
 {
     public partial class frmQuanLyXe : Form
     {
+
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
@@ -25,7 +26,6 @@ namespace _7_TTNT45K_Nhom05
             table.Clear();
             adapter.Fill(table);
             dgv.DataSource = table;
-
         }
 
         public frmQuanLyXe()
@@ -84,13 +84,19 @@ namespace _7_TTNT45K_Nhom05
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into XE values('"+txtMaXe.Text+"','"+cbTinhTrang.Text+"','"+txtMoTa.Text+"', '"+cbLoaiXe.Text+"','"+txtDonGia.Text+"')";
+            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "',N'" + txtMoTa.Text + "',N'" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";
             command.ExecuteNonQuery();
-            loaddata();
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!");
 
-
- 
-
+            }
+            loaddata(); 
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -98,18 +104,34 @@ namespace _7_TTNT45K_Nhom05
             command = connection.CreateCommand();
             command.CommandText = "delete from XE where MaX='" + txtMaXe.Text + "'";
             command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Xóa thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!");
+
+            }
             loaddata();
-
-
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "','" + txtMoTa.Text + "','" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";
+            command.CommandText = "update XE set TinhTrang=N'" + cbTinhTrang.Text + "',MoTa=N'" + txtMoTa.Text + "',Loai=N'" + cbLoaiXe.Text + "',DonGiaThue='" + txtDonGia.Text + "' where MaX='" + txtMaXe.Text + "'";
             command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Cập nhật thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!");
+            } 
             loaddata();
-
 
         }
 
@@ -128,6 +150,10 @@ namespace _7_TTNT45K_Nhom05
             txtMoTa.Text = dgv.Rows[i].Cells[2].Value.ToString();
             cbLoaiXe.Text = dgv.Rows[i].Cells[3].Value.ToString();
             txtDonGia.Text = dgv.Rows[i].Cells[4].Value.ToString();
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
