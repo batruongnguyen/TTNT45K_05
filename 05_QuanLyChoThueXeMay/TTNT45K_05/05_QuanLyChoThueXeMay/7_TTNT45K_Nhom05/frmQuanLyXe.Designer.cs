@@ -50,8 +50,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.MaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnXemLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -184,10 +185,10 @@
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXoa.Location = new System.Drawing.Point(499, 156);
+            this.btnXoa.Location = new System.Drawing.Point(592, 61);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(127, 29);
+            this.btnXoa.Size = new System.Drawing.Size(102, 46);
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -197,10 +198,10 @@
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSua.Location = new System.Drawing.Point(499, 105);
+            this.btnSua.Location = new System.Drawing.Point(488, 115);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(127, 29);
+            this.btnSua.Size = new System.Drawing.Size(100, 49);
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -210,10 +211,10 @@
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThem.Location = new System.Drawing.Point(499, 55);
+            this.btnThem.Location = new System.Drawing.Point(488, 61);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(127, 31);
+            this.btnThem.Size = new System.Drawing.Size(100, 46);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -223,7 +224,7 @@
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnTimKiem.Location = new System.Drawing.Point(477, 40);
+            this.btnTimKiem.Location = new System.Drawing.Point(510, 29);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(127, 31);
@@ -257,6 +258,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnXemLai);
             this.groupBox1.Controls.Add(this.txtMoTa);
             this.groupBox1.Controls.Add(this.txtMaXe);
             this.groupBox1.Controls.Add(this.cbLoaiXe);
@@ -274,7 +276,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(57, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(661, 207);
+            this.groupBox1.Size = new System.Drawing.Size(699, 207);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin xe";
@@ -290,7 +292,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox2.Location = new System.Drawing.Point(57, 248);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(661, 75);
+            this.groupBox2.Size = new System.Drawing.Size(693, 75);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
@@ -336,6 +338,13 @@
             this.dgv.TabIndex = 0;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
+            // MaX
+            // 
+            this.MaX.DataPropertyName = "MaX";
+            this.MaX.HeaderText = "Mã Xe";
+            this.MaX.Name = "MaX";
+            this.MaX.Width = 99;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -349,12 +358,14 @@
             this.label1.Text = "QUẢN LÝ XE";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // MaX
+            // btnXemLai
             // 
-            this.MaX.DataPropertyName = "MaX";
-            this.MaX.HeaderText = "Mã Xe";
-            this.MaX.Name = "MaX";
-            this.MaX.Width = 99;
+            this.btnXemLai.Location = new System.Drawing.Point(593, 115);
+            this.btnXemLai.Name = "btnXemLai";
+            this.btnXemLai.Size = new System.Drawing.Size(100, 49);
+            this.btnXemLai.TabIndex = 8;
+            this.btnXemLai.Text = "Xem";
+            this.btnXemLai.UseVisualStyleBackColor = true;
             // 
             // frmQuanLyXe
             // 
@@ -406,5 +417,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaX;
+        private System.Windows.Forms.Button btnXemLai;
     }
 }

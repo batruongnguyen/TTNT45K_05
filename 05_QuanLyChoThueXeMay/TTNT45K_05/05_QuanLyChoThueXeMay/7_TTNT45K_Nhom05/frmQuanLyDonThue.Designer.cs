@@ -38,7 +38,6 @@
             this.NgayThue = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtMaXe = new System.Windows.Forms.TextBox();
             this.btnThemDT = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnXoaDT = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtDonGiaThue = new System.Windows.Forms.TextBox();
@@ -60,6 +58,11 @@
             this.GioTra = new System.Windows.Forms.DateTimePicker();
             this.btnThanhTien = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnXemlai = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMahoadon = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -171,14 +174,6 @@
             this.button1.Text = "Sửa";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // txtMaXe
-            // 
-            this.txtMaXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtMaXe.Location = new System.Drawing.Point(582, 58);
-            this.txtMaXe.Name = "txtMaXe";
-            this.txtMaXe.Size = new System.Drawing.Size(230, 31);
-            this.txtMaXe.TabIndex = 2;
-            // 
             // btnThemDT
             // 
             this.btnThemDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,7 +190,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(500, 64);
+            this.label2.Location = new System.Drawing.Point(477, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 25);
             this.label2.TabIndex = 15;
@@ -221,7 +216,7 @@
             this.cbLoaixe.Items.AddRange(new object[] {
             "Xe máy",
             "Xe đạp"});
-            this.cbLoaixe.Location = new System.Drawing.Point(198, 92);
+            this.cbLoaixe.Location = new System.Drawing.Point(588, 92);
             this.cbLoaixe.Name = "cbLoaixe";
             this.cbLoaixe.Size = new System.Drawing.Size(235, 33);
             this.cbLoaixe.TabIndex = 1;
@@ -232,7 +227,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(41, 95);
+            this.label6.Location = new System.Drawing.Point(477, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 25);
             this.label6.TabIndex = 9;
@@ -284,11 +279,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtMahoadon);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnTimKiemDT);
-            this.groupBox1.Controls.Add(this.txtMaXe);
             this.groupBox1.Controls.Add(this.cbLoaixe);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -298,13 +295,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(198, 44);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(235, 31);
-            this.txtSDT.TabIndex = 0;
             // 
             // label3
             // 
@@ -412,12 +402,56 @@
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
+            // btnXemlai
+            // 
+            this.btnXemlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemlai.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnXemlai.Location = new System.Drawing.Point(979, 422);
+            this.btnXemlai.Name = "btnXemlai";
+            this.btnXemlai.Size = new System.Drawing.Size(119, 38);
+            this.btnXemlai.TabIndex = 16;
+            this.btnXemlai.Text = "Xem lại";
+            this.btnXemlai.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(200, 42);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(233, 33);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(588, 42);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(233, 33);
+            this.comboBox2.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(41, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 25);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Mã hóa đơn";
+            // 
+            // txtMahoadon
+            // 
+            this.txtMahoadon.Location = new System.Drawing.Point(200, 92);
+            this.txtMahoadon.Name = "txtMahoadon";
+            this.txtMahoadon.Size = new System.Drawing.Size(233, 31);
+            this.txtMahoadon.TabIndex = 20;
+            // 
             // frmQuanLyDonThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1179, 796);
+            this.Controls.Add(this.btnXemlai);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnThanhTien);
             this.Controls.Add(this.btnXoaDT);
@@ -463,14 +497,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtMaXe;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbDamBao;
         private System.Windows.Forms.DateTimePicker GioThue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtDonGiaThue;
@@ -481,5 +513,10 @@
         private System.Windows.Forms.DateTimePicker GioTra;
         private System.Windows.Forms.Button btnThanhTien;
         private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnXemlai;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtMahoadon;
     }
 }

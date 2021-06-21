@@ -46,6 +46,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.btnXemlai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -56,9 +57,9 @@
             // 
             this.btnThemKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThemKH.Location = new System.Drawing.Point(586, 44);
+            this.btnThemKH.Location = new System.Drawing.Point(562, 65);
             this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(137, 42);
+            this.btnThemKH.Size = new System.Drawing.Size(113, 42);
             this.btnThemKH.TabIndex = 3;
             this.btnThemKH.Text = "Thêm";
             this.btnThemKH.UseVisualStyleBackColor = true;
@@ -68,9 +69,9 @@
             // 
             this.btnSuaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSuaKH.Location = new System.Drawing.Point(586, 86);
+            this.btnSuaKH.Location = new System.Drawing.Point(562, 113);
             this.btnSuaKH.Name = "btnSuaKH";
-            this.btnSuaKH.Size = new System.Drawing.Size(137, 41);
+            this.btnSuaKH.Size = new System.Drawing.Size(113, 41);
             this.btnSuaKH.TabIndex = 4;
             this.btnSuaKH.Text = "Sửa";
             this.btnSuaKH.UseVisualStyleBackColor = true;
@@ -79,9 +80,9 @@
             // 
             this.btnXoaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXoaKH.Location = new System.Drawing.Point(586, 133);
+            this.btnXoaKH.Location = new System.Drawing.Point(681, 68);
             this.btnXoaKH.Name = "btnXoaKH";
-            this.btnXoaKH.Size = new System.Drawing.Size(137, 39);
+            this.btnXoaKH.Size = new System.Drawing.Size(106, 39);
             this.btnXoaKH.TabIndex = 5;
             this.btnXoaKH.Text = "Xóa";
             this.btnXoaKH.UseVisualStyleBackColor = true;
@@ -102,20 +103,21 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnXemlai);
             this.groupBox1.Controls.Add(this.txtDiachi);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnXoaKH);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnSuaKH);
-            this.groupBox1.Controls.Add(this.btnXoaKH);
             this.groupBox1.Controls.Add(this.btnThemKH);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(54, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(793, 205);
+            this.groupBox1.Size = new System.Drawing.Size(808, 205);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
@@ -223,7 +225,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox2.Location = new System.Drawing.Point(54, 245);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(793, 78);
+            this.groupBox2.Size = new System.Drawing.Size(808, 78);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
@@ -236,7 +238,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox3.Location = new System.Drawing.Point(54, 345);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(793, 326);
+            this.groupBox3.Size = new System.Drawing.Size(808, 326);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chung";
@@ -248,10 +250,19 @@
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1.Location = new System.Drawing.Point(38, 35);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(708, 285);
+            this.dgv1.Size = new System.Drawing.Size(731, 285);
             this.dgv1.TabIndex = 0;
             this.dgv1.TabStop = false;
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
+            // 
+            // btnXemlai
+            // 
+            this.btnXemlai.Location = new System.Drawing.Point(681, 113);
+            this.btnXemlai.Name = "btnXemlai";
+            this.btnXemlai.Size = new System.Drawing.Size(106, 41);
+            this.btnXemlai.TabIndex = 1;
+            this.btnXemlai.Text = "Xem ";
+            this.btnXemlai.UseVisualStyleBackColor = true;
             // 
             // frmQuanLyKH
             // 
@@ -301,5 +312,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.Button btnXemlai;
     }
 }
