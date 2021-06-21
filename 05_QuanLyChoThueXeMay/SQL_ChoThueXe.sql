@@ -82,3 +82,4 @@ Update THUE
 Set ThanhTien=Dongiathue*Thoigianthue
 from THUE inner join XE on
 THUE.MaX=XE.MaX
+

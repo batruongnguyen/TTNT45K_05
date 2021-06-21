@@ -15,7 +15,7 @@ namespace _7_TTNT45K_Nhom05
 
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
@@ -155,6 +155,16 @@ namespace _7_TTNT45K_Nhom05
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnXemLai_Click(object sender, EventArgs e)
+        {
+            txtMaXe.Text = "";
+            txtDonGia.Text = "";
+            txtMoTa.Text = "";
+            cbLoaiXe.Text = "";
+            cbTinhTrang.Text = "";
+            txtMaXe.Enabled = true;
         }
     }
 }

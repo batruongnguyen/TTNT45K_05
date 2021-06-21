@@ -40,7 +40,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnXemLai = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDoanhThu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(55, 84);
+            this.label2.Location = new System.Drawing.Point(55, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.cbTinhTrangXe.FormattingEnabled = true;
             this.cbTinhTrangXe.Items.AddRange(new object[] {
             "Đang cho thuê",
-            "Sẵn có",
+            "San co",
             "Hỏng"});
             this.cbTinhTrangXe.Location = new System.Drawing.Point(201, 84);
             this.cbTinhTrangXe.Name = "cbTinhTrangXe";
@@ -111,11 +111,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(55, 132);
+            this.label3.Location = new System.Drawing.Point(55, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 25);
+            this.label3.Size = new System.Drawing.Size(110, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Thời gian";
+            this.label3.Text = "Ngày thuê";
             // 
             // dataGridView1
             // 
@@ -125,16 +125,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(569, 307);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 186);
+            this.label4.Location = new System.Drawing.Point(55, 187);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 25);
+            this.label4.Size = new System.Drawing.Size(93, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Thời gian trả";
+            this.label4.Text = "Ngày trả";
             // 
             // dateTimePicker2
             // 
@@ -154,31 +155,32 @@
             this.btnXemLai.TabIndex = 9;
             this.btnXemLai.Text = "Xem lại";
             this.btnXemLai.UseVisualStyleBackColor = true;
+            this.btnXemLai.Click += new System.EventHandler(this.btnXemLai_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 232);
+            this.label5.Location = new System.Drawing.Point(55, 238);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Doanh thu";
             // 
-            // textBox1
+            // txtDoanhThu
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(201, 232);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 31);
-            this.textBox1.TabIndex = 11;
+            this.txtDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoanhThu.Location = new System.Drawing.Point(201, 232);
+            this.txtDoanhThu.Name = "txtDoanhThu";
+            this.txtDoanhThu.Size = new System.Drawing.Size(216, 31);
+            this.txtDoanhThu.TabIndex = 11;
             // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 610);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDoanhThu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnXemLai);
             this.Controls.Add(this.dateTimePicker2);
@@ -215,6 +217,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnXemLai;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDoanhThu;
     }
 }
