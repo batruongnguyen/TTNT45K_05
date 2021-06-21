@@ -78,6 +78,28 @@ namespace _7_TTNT45K_Nhom05
             dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
             dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayTra"].Value);
             //Xử lý trường hợp nếu Ngày thuê ngày trả không có dữ liệu thì sao
+
+            /* Code ngày chọn mục không có ngày thuê, ngày trả
+             if(dateTimePicker1.Value!=null)
+            {
+                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
+
+            }
+            else
+            {
+                dateTimePicker1.Value = new DateTime(06, 20, 2021);
+                MessageBox.Show("Thông báo", "Xe này chưa được thuê!");
+            }
+            if (dateTimePicker2.Value != null)
+            {
+                dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayTra"].Value);
+            }
+            else
+            {
+                dateTimePicker2.Value = new DateTime(06, 20, 2021);
+                MessageBox.Show("Thông báo", "Xe này chưa được thuê!");
+            }*/
+
             cbTinhTrangXe.Enabled = false;
             dateTimePicker1.Enabled = false;
             dateTimePicker2.Enabled = false;
@@ -97,7 +119,8 @@ namespace _7_TTNT45K_Nhom05
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
 
-            string sQuery = "select XE.MaX, TinhTrang,NgayThue,NgayTra from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang like '%"+cbTinhTrangXe.Text+"%' ";
+            
+            string sQuery = "select XE.MaX, TinhTrang,NgayThue,NgayTra from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang like '%" + cbTinhTrangXe.Text + "%' OR NgayThue='"+dateTimePicker1.Value.ToString("dd/MM/yyyy")+"'";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "TinhTrang");
@@ -123,6 +146,11 @@ namespace _7_TTNT45K_Nhom05
             txtDoanhThu.Enabled = true;
         }
 
-        
+
+
+        public DateTime datetime1 { get; set; }
+
+        public DateTime datetime2 { get; set; }
+
     }
 }

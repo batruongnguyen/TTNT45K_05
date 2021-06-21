@@ -77,7 +77,7 @@
             this.cbTinhTrangXe.Items.AddRange(new object[] {
             "Đang cho thuê",
             "San co",
-            "Hỏng"});
+            "Hong"});
             this.cbTinhTrangXe.Location = new System.Drawing.Point(201, 84);
             this.cbTinhTrangXe.Name = "cbTinhTrangXe";
             this.cbTinhTrangXe.Size = new System.Drawing.Size(216, 33);

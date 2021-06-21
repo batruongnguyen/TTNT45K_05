@@ -43,7 +43,7 @@ values ('D01', 'Đang cho thuê', 'Màu Vàng', 'Xe Đap', '500'),
 ('M04', 'Hong', 'Màu Vàng', 'Xe Máy', '1000'),
 ('M05', 'Đang cho thuê', 'Màu Xanh', 'Xe Máy', '1000'),
 ('M06', 'San co', 'Màu Xanh', 'Xe Máy', '1000'),
-('M07', 'Hỏng', 'Màu Trang', 'Xe Máy', '1000'),
+('M07', 'Hong', 'Màu Trang', 'Xe Máy', '1000'),
 ('D04', 'Đang cho thuê', 'Màu Xanh', 'Xe Đap', '500'),
 ('D05', 'Đang cho thuê', 'Màu Vàng', 'Xe Đap', '500')
 
@@ -82,4 +82,5 @@ Update THUE
 Set ThanhTien=Dongiathue*Thoigianthue
 from THUE inner join XE on
 THUE.MaX=XE.MaX
+
 
