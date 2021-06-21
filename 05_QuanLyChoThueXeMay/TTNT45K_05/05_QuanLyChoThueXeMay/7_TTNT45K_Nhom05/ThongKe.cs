@@ -15,7 +15,7 @@ namespace _7_TTNT45K_Nhom05
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = "Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string sThongKe = "Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
@@ -25,7 +25,7 @@ namespace _7_TTNT45K_Nhom05
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
-            dgv2.DataSource = table;
+            dataGridView1.DataSource = table;
         }
         public frmThongKe()
         {
@@ -49,9 +49,28 @@ namespace _7_TTNT45K_Nhom05
 
         private void frmThongKe_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(str);
-            connection.Open();
-            loaddata();
+            SqlConnection ThongKe = new SqlConnection(sThongKe);
+            try
+            {
+                ThongKe.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+            }
+
+            string sQuery = "select SoDT, TinhTrang,NgayThue,NgayTra from THUE inner join XE on THUE.MaX=XE.MaX";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
+            
+            DataSet ds = new DataSet();
+
+            adapter.Fill(ds, "XE");
+
+            dataGridView1.DataSource = ds.Tables["XE"];
+
+            ThongKe.Close();
+            
+
 
         }
 
@@ -59,5 +78,36 @@ namespace _7_TTNT45K_Nhom05
         {
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {    
+            SqlConnection ThongKe = new SqlConnection(sThongKe);
+            try
+            {
+                ThongKe.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+            }
+            string sTimKiem = "Select SoDT, TinhTrang, NgayThue, NgayTra from XE inner join THUE on XE.MaX=THUE.MaX";
+            SqlCommand cmd = new SqlCommand(sTimKiem, ThongKe);
+            cmd.Parameters.AddWithValue("SoDT", cbTinhTrangXe.Text);
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dataGridView1.DataSource = dt;
+
+
+
+        }
+
+        
     }
 }
