@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace _7_TTNT45K_Nhom05
 {
     public partial class frmQuanLyDonThue : Form
     {
+        string sCon = "Data Source=DESKTOP-KMNS09Q\\SQLEXPRESS;Initial Catalog=ChoThueXe;Integrated Security=True";
+
         public frmQuanLyDonThue()
         {
             InitializeComponent();
@@ -19,7 +22,21 @@ namespace _7_TTNT45K_Nhom05
 
         private void frmQuanLyDonThue_Load(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection(sCon);
+            try
+            {
+                con.Open();
+            }    
+            catch(Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB! ");
+            }
+            string sQuery = "select*from THUE";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "THUE");
+            dataGridView1.DataSource = ds.Tables["THUE"];
+            con.Close();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

@@ -121,3 +121,11 @@ C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05
 C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.Properties.Resources.resources
 C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThongKe.resources
 C:\Users\ADMINIS\Documents\GitHub\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmMain.resources
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyDonThue.resources
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyKH.resources
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmQuanLyXe.resources
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\_7_TTNT45K_Nhom05.frmThongKe.resources
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\TTNT nhóm 5\TTNT45K_05\05_QuanLyChoThueXeMay\TTNT45K_05\05_QuanLyChoThueXeMay\7_TTNT45K_Nhom05\obj\Debug\7_TTNT45K_Nhom05.exe
