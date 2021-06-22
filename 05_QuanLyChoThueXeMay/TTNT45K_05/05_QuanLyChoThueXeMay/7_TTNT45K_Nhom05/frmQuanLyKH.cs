@@ -24,6 +24,16 @@ namespace _7_TTNT45K_Nhom05
             InitializeComponent();
         }
 
+        void loaddata()
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select * from KHACH";
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            dgv1.DataSource = table;
+        }
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -41,90 +51,44 @@ namespace _7_TTNT45K_Nhom05
 
         private void frmQuanLyKH_Load(object sender, EventArgs e)
         {
-            SqlConnection Con = new SqlConnection(SCon);
-            try
-            {
-                Con.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
-            }
-            string sQuery = "select *from KHACH";
-            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, Con);
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
 
-            DataSet ds = new DataSet();
-
-            adapter.Fill(ds, "KhachHang");
-
-            dgv1.DataSource = ds.Tables["KhachHang"];
-
-            Con.Close();
         }
 
         private void btnThemKH_Click(object sender, EventArgs e)
         {
-            SqlConnection KH = new SqlConnection(sKH);
+            command = connection.CreateCommand();
+            command.CommandText = "insert into KHACH values('" + txtSDT.Text + "','" + txtTen.Text + "','" + txtDiachi.Text + "')";
             try
             {
-                KH.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thông Báo", "Xảy ra lỗi trong quá trình kết nối DB");
+                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
             }
-
-            string sSDT = txtSDT.Text;
-            string sTen = txtTen.Text;
-            string sDiaChi = txtDiachi.Text;
-
-            string sQuery = "insert into KHACH values (@SoDT,@Ten,@DiaChi)";
-            SqlCommand cmd = new SqlCommand(sQuery, KH);
-            cmd.Parameters.AddWithValue("@SoDT", sSDT);
-            cmd.Parameters.AddWithValue("@Ten", sTen);
-            cmd.Parameters.AddWithValue("@DiaChi", sDiaChi);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thông Báo", "Thêm mới thành công!");
-            }
-            catch ( Exception ex)
-            {
-                MessageBox.Show("Thông Báo", "Xảy ra lỗi trong quá trình thêm mới!");
-            }
-            KH.Close();
-
-
-           
+            loaddata();       
         }
 
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
-            SqlConnection KH = new SqlConnection(sKH);
-            try
-            {
-                KH.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thông Báo", "Xảy ra lỗi trong quá trình kết nối DB");
-            }
             command = connection.CreateCommand();
             command.CommandText = "delete from KHACH where SoDT='" + txtSDT.Text + "'";
             command.ExecuteNonQuery();
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show("Thông Báo", "Xóa thành công!");
+                MessageBox.Show("Xóa thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thông Báo", "Xảy ra lỗi trong quá trình xóa!");
+                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
 
             }
-            KH.Close();
-
+            loaddata();
         }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -133,31 +97,20 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnSuaKH_Click(object sender, EventArgs e)
         {
-            SqlConnection KH = new SqlConnection(sKH);
-            try
-            {
-                KH.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thông Báo", "Xảy ra lỗi trong quá trình kết nối DB");
-            }
             command = connection.CreateCommand();
-            command.CommandText = "update KHACH set Ten=N'" + txtTen.Text + "',DiaChi='" + txtDiachi.Text + "'where SoDT='"+txtSDT.Text+"'";
+            command.CommandText = "update KHACH set Ten=N'" + txtTen.Text + "',DiaChi='" + txtDiachi.Text + "'where SoDT='" + txtSDT.Text + "'";
             command.ExecuteNonQuery();
 
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show("Thông Báo", "Cập nhật thành công!");
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thông Báo", "Xảy ra lỗi trong quá trình cập nhật!");
-
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!", "Thông báo");
             }
-            KH.Close();
-
+            loaddata();
         }
 
         private void btnTimkiemKH_Click(object sender, EventArgs e)
@@ -165,23 +118,23 @@ namespace _7_TTNT45K_Nhom05
             connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM KHACH WHERE SoDT LIKE N'%" + txtSDT + "%'", connection);
             DataSet ds = new DataSet();
-            adapter.Fill(ds,"KHACH");
+            adapter.Fill(table);
             if (ds.Tables["KHACH"].Rows.Count > 0)
             {
                 dgv1.DataSource = ds.Tables["KHACH"];
             }
             else
             {
-                MessageBox.Show("Không tìm thấy khách hàng có thông tin phù hợp!");
+                MessageBox.Show("Không tìm thấy khách hàng có thông tin phù hợp!", "Thông báo");
                 txtTimkiem.Text = "";
             }
             loaddata();
             connection.Close();
-
         }
 
         private void dgv1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtSDT.Enabled = false;
             txtSDT.Text = dgv1.Rows[e.RowIndex].Cells["SoDT"].Value.ToString();
             txtTen.Text = dgv1.Rows[e.RowIndex].Cells["Ten"].Value.ToString();
             txtDiachi.Text = dgv1.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
@@ -192,6 +145,7 @@ namespace _7_TTNT45K_Nhom05
             txtDiachi.Text = "";
             txtTen.Text = "";
             txtSDT.Text = "";
+            txtSDT.Enabled = true;
 
         }
 

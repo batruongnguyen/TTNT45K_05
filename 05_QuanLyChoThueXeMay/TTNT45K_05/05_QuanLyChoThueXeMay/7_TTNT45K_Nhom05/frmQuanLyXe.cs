@@ -18,6 +18,12 @@ namespace _7_TTNT45K_Nhom05
         string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
+        
+
+        public frmQuanLyXe()
+        {
+            InitializeComponent();
+        }
         void loaddata()
         {
             command = connection.CreateCommand();
@@ -26,11 +32,6 @@ namespace _7_TTNT45K_Nhom05
             table.Clear();
             adapter.Fill(table);
             dgv.DataSource = table;
-        }
-
-        public frmQuanLyXe()
-        {
-            InitializeComponent();
         }
 
         private void MaXe_Click(object sender, EventArgs e)
@@ -78,23 +79,20 @@ namespace _7_TTNT45K_Nhom05
             connection = new SqlConnection(str);
             connection.Open();
             loaddata();
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "',N'" + txtMoTa.Text + "',N'" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";
-            command.ExecuteNonQuery();
+            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "','" + txtMoTa.Text + "','" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";   
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show("Thêm thành công!");
+                MessageBox.Show("Thêm thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!");
-
+                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
             }
             loaddata(); 
         }
@@ -107,11 +105,11 @@ namespace _7_TTNT45K_Nhom05
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show("Xóa thành công!");
+                MessageBox.Show("Xóa thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!");
+                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
 
             }
             loaddata();
@@ -120,19 +118,17 @@ namespace _7_TTNT45K_Nhom05
         private void btnSua_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update XE set TinhTrang=N'" + cbTinhTrang.Text + "',MoTa=N'" + txtMoTa.Text + "',Loai=N'" + cbLoaiXe.Text + "',DonGiaThue='" + txtDonGia.Text + "' where MaX='" + txtMaXe.Text + "'";
-            command.ExecuteNonQuery();
+            command.CommandText = "update XE set TinhTrang=N'" + cbTinhTrang.Text + "',MoTa=N'" + txtMoTa.Text + "',Loai=N'" + cbLoaiXe.Text + "',DonGiaThue='" + txtDonGia.Text + "' where MaX='" + txtMaXe.Text + "'";   
             try
             {
                 command.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật thành công!");
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!");
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!", "Thông báo");
             } 
             loaddata();
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -142,7 +138,7 @@ namespace _7_TTNT45K_Nhom05
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaXe.ReadOnly = true;
+            txtMaXe.Enabled = false;
             int i;
             i = dgv.CurrentRow.Index;
             txtMaXe.Text = dgv.Rows[i].Cells[0].Value.ToString();

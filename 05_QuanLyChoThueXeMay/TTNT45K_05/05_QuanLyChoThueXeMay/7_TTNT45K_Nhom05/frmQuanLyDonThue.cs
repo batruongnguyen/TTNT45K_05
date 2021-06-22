@@ -13,7 +13,7 @@ namespace _7_TTNT45K_Nhom05
 {
     public partial class frmQuanLyDonThue : Form
     {
-        string sCon = "Data Source=DESKTOP-KMNS09Q\\SQLEXPRESS;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string sCon = "Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
 
         public frmQuanLyDonThue()
         {
@@ -29,7 +29,7 @@ namespace _7_TTNT45K_Nhom05
             }    
             catch(Exception ex)
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB! ");
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB! ", "Thông báo");
             }
             string sQuery = "select*from THUE";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
@@ -80,6 +80,11 @@ namespace _7_TTNT45K_Nhom05
         }
 
         private void txtTimKiemDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
         {
 
         }

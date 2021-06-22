@@ -285,6 +285,7 @@
             this.Name = "frmQuanLyKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Khách hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLyKH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
