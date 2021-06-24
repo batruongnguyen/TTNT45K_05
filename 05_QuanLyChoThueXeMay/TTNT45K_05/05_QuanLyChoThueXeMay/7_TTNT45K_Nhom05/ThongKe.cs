@@ -15,7 +15,7 @@ namespace _7_TTNT45K_Nhom05
     {
         SqlConnection connection;
         SqlCommand command;
-        string sThongKe = "Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string sThongKe = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
@@ -151,6 +151,11 @@ namespace _7_TTNT45K_Nhom05
         public DateTime datetime1 { get; set; }
 
         public DateTime datetime2 { get; set; }
+
+        private void txtDoanhThu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

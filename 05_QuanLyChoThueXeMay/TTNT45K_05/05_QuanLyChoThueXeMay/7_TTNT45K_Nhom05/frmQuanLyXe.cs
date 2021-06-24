@@ -15,7 +15,7 @@ namespace _7_TTNT45K_Nhom05
 
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         
@@ -56,7 +56,26 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            SqlConnection TKX = new SqlConnection(str);
+            try
+            {
+                TKX.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+            }
 
+            string sQuery = "select XE.MaX,TinhTrang, MoTa, Loai, DonGiaThue from XE where MaX like '%" + txtThongTinTK.Text + "%'or TinhTrang like '%" + txtThongTinTK.Text + "%'or Loai like '%" + txtThongTinTK.Text + "%' or MoTa like '%" + txtThongTinTK.Text + "%' or DonGiaThue like '%" + txtThongTinTK.Text + "%' ";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TKX);
+
+            DataSet ds = new DataSet();
+
+            adapter.Fill(ds, "KHACH");
+
+            dgv.DataSource = ds.Tables["KHACH"];
+
+            TKX.Close();
         }
 
         private void cbTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,7 +103,7 @@ namespace _7_TTNT45K_Nhom05
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "','" + txtMoTa.Text + "','" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";   
+            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "',N'" + txtMoTa.Text + "','" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";   
             try
             {
                 command.ExecuteNonQuery();

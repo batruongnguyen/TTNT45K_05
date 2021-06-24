@@ -50,9 +50,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(236, 25);
+            this.label1.Location = new System.Drawing.Point(315, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 31);
+            this.label1.Size = new System.Drawing.Size(195, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "THỐNG KÊ";
             // 
@@ -62,9 +63,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(55, 92);
+            this.label2.Location = new System.Drawing.Point(73, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 25);
+            this.label2.Size = new System.Drawing.Size(171, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tình trạng xe";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -78,9 +80,10 @@
             "Đang cho thuê",
             "San co",
             "Hong"});
-            this.cbTinhTrangXe.Location = new System.Drawing.Point(201, 84);
+            this.cbTinhTrangXe.Location = new System.Drawing.Point(268, 103);
+            this.cbTinhTrangXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTinhTrangXe.Name = "cbTinhTrangXe";
-            this.cbTinhTrangXe.Size = new System.Drawing.Size(216, 33);
+            this.cbTinhTrangXe.Size = new System.Drawing.Size(287, 38);
             this.cbTinhTrangXe.TabIndex = 0;
             this.cbTinhTrangXe.SelectedIndexChanged += new System.EventHandler(this.cbTinhTrangXe_SelectedIndexChanged);
             // 
@@ -88,9 +91,10 @@
             // 
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThongKe.Location = new System.Drawing.Point(453, 104);
+            this.btnThongKe.Location = new System.Drawing.Point(604, 128);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(125, 53);
+            this.btnThongKe.Size = new System.Drawing.Size(167, 65);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Tìm kiếm";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -100,9 +104,10 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(201, 134);
+            this.dateTimePicker1.Location = new System.Drawing.Point(268, 165);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(216, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 37);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // label3
@@ -111,18 +116,20 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(55, 140);
+            this.label3.Location = new System.Drawing.Point(73, 172);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(138, 31);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ngày thuê";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 278);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 342);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(569, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(759, 378);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -131,9 +138,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 187);
+            this.label4.Location = new System.Drawing.Point(73, 230);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 25);
+            this.label4.Size = new System.Drawing.Size(117, 31);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ngày trả";
             // 
@@ -141,17 +149,19 @@
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(201, 181);
+            this.dateTimePicker2.Location = new System.Drawing.Point(268, 223);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(216, 31);
+            this.dateTimePicker2.Size = new System.Drawing.Size(287, 37);
             this.dateTimePicker2.TabIndex = 8;
             // 
             // btnXemLai
             // 
             this.btnXemLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemLai.Location = new System.Drawing.Point(453, 173);
+            this.btnXemLai.Location = new System.Drawing.Point(604, 213);
+            this.btnXemLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXemLai.Name = "btnXemLai";
-            this.btnXemLai.Size = new System.Drawing.Size(125, 50);
+            this.btnXemLai.Size = new System.Drawing.Size(167, 62);
             this.btnXemLai.TabIndex = 9;
             this.btnXemLai.Text = "Xem lại";
             this.btnXemLai.UseVisualStyleBackColor = true;
@@ -161,25 +171,28 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 238);
+            this.label5.Location = new System.Drawing.Point(73, 293);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.Size = new System.Drawing.Size(139, 31);
             this.label5.TabIndex = 10;
             this.label5.Text = "Doanh thu";
             // 
             // txtDoanhThu
             // 
             this.txtDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoanhThu.Location = new System.Drawing.Point(201, 232);
+            this.txtDoanhThu.Location = new System.Drawing.Point(268, 286);
+            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDoanhThu.Name = "txtDoanhThu";
-            this.txtDoanhThu.Size = new System.Drawing.Size(216, 31);
+            this.txtDoanhThu.Size = new System.Drawing.Size(287, 37);
             this.txtDoanhThu.TabIndex = 11;
+            this.txtDoanhThu.TextChanged += new System.EventHandler(this.txtDoanhThu_TextChanged);
             // 
             // frmThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 610);
+            this.ClientSize = new System.Drawing.Size(869, 751);
             this.Controls.Add(this.txtDoanhThu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnXemLai);
@@ -194,6 +207,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống Kê";

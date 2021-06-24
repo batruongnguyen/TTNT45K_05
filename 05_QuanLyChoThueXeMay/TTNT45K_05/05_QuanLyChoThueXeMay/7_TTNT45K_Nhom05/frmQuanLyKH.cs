@@ -15,7 +15,7 @@ namespace _7_TTNT45K_Nhom05
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         
@@ -115,21 +115,26 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnTimkiemKH_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM KHACH WHERE SoDT LIKE N'%" + txtSDT + "%'", connection);
+            SqlConnection TK = new SqlConnection(str);
+            try
+            {
+                TK.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+            }
+
+            string sQuery = "select KHACH.SoDT,Ten, DiaChi from KHACH where Ten like '%" + txtTimkiem.Text + "%'or SoDT like '%" + txtTimkiem.Text + "%'or DiaChi like '%" + txtTimkiem.Text + "%' ";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TK);
+
             DataSet ds = new DataSet();
-            adapter.Fill(table);
-            if (ds.Tables["KHACH"].Rows.Count > 0)
-            {
-                dgv1.DataSource = ds.Tables["KHACH"];
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy khách hàng có thông tin phù hợp!", "Thông báo");
-                txtTimkiem.Text = "";
-            }
-            loaddata();
-            connection.Close();
+
+            adapter.Fill(ds, "KHACH");
+
+            dgv1.DataSource = ds.Tables["KHACH"];
+
+            TK.Close();
         }
 
         private void dgv1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -146,6 +151,21 @@ namespace _7_TTNT45K_Nhom05
             txtTen.Text = "";
             txtSDT.Text = "";
             txtSDT.Enabled = true;
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
