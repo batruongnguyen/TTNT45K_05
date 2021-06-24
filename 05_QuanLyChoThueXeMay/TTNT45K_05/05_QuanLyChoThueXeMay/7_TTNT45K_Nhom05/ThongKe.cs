@@ -120,11 +120,11 @@ namespace _7_TTNT45K_Nhom05
             }
 
             
-            string sQuery = "select XE.MaX, TinhTrang,NgayThue,NgayTra from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang like '%" + cbTinhTrangXe.Text + "%' OR NgayThue='"+dateTimePicker1.Value.ToString("dd/MM/yyyy")+"'";
+            string sQuery = "select XE.MaX, TinhTrang,NgayThue,NgayTra from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang like '%" + cbTinhTrangXe.Text + "%' ";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "TinhTrang");
-            dataGridView1.DataSource = ds.Tables["TinhTrang"];
+            adapter.Fill(ds, "ThongKe");
+            dataGridView1.DataSource = ds.Tables["ThongKe"];
 
             ThongKe.Close();
         }

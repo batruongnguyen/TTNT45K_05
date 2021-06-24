@@ -11,7 +11,7 @@ create table KHACH(SoDT varchar(15) not null primary key,
 Ten nvarchar(100) not null,
 DiaChi nvarchar(100) not null)
 
-create table THUE(SoDT varchar(15) not null ,
+create table THUE(MaHD int identity (1,1) primary key, SoDT varchar(15) not null ,
 MaX varchar(5) not null,
 DamBao nvarchar(50) not null,
 NgayThue date, GioThue time, NgayTra date, GioTra time,
@@ -71,7 +71,7 @@ drop table XE
 
 
 select*from XE
-select*from THUE
+select * from THUE where ThanhTien IS NOT NULL
 select*from KHACH
 
 Update THUE
@@ -82,5 +82,30 @@ Update THUE
 Set ThanhTien=Dongiathue*Thoigianthue
 from THUE inner join XE on
 THUE.MaX=XE.MaX
+
+
+Update THUE
+Set ThanhTien=DonGiaThue*ThoiGianThue
+from THUE inner join XE on
+THUE.MaX=XE.MaX
+
+insert into Thue values 
+(
+	'0905113',
+	'D04',
+	'CMT',
+	'2015-10-25',
+	'12:00',
+	NULL,
+	NULL,
+	NULL,
+	NULL
+)
+
+select * from Thue where MaX Like 'M%'
+select * from Thue where MaX Like 'D%'
+delete from Thue where MaHD = 13
+
+update Thue set NgayTra = '06/24/2021', GioTra = '2:00' where MaHD = 13
 
 

@@ -13,7 +13,7 @@ namespace _7_TTNT45K_Nhom05
 {
     public partial class frmQuanLyDonThue : Form
     {
-        string sCon = "Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+       
 
         public frmQuanLyDonThue()
         {
@@ -22,21 +22,7 @@ namespace _7_TTNT45K_Nhom05
 
         private void frmQuanLyDonThue_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(sCon);
-            try
-            {
-                con.Open();
-            }    
-            catch(Exception ex)
-            {
-                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB! ", "Thông báo");
-            }
-            string sQuery = "select*from THUE";
-            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, con);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds, "THUE");
-            dataGridView1.DataSource = ds.Tables["THUE"];
-            con.Close();
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -90,3 +76,15 @@ namespace _7_TTNT45K_Nhom05
         }
     }
 }
+
+    
+
+
+
+        
+
+        
+
+        
+
+   
