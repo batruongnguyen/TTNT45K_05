@@ -15,10 +15,10 @@ namespace _7_TTNT45K_Nhom05
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
-        
+
         public frmQuanLyKH()
         {
             InitializeComponent();
@@ -34,27 +34,12 @@ namespace _7_TTNT45K_Nhom05
             dgv1.DataSource = table;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmQuanLyKH_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(str);
             connection.Open();
             loaddata();
-
         }
 
         private void btnThemKH_Click(object sender, EventArgs e)
@@ -70,7 +55,7 @@ namespace _7_TTNT45K_Nhom05
             {
                 MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
             }
-            loaddata();       
+            loaddata();
         }
 
         private void btnXoaKH_Click(object sender, EventArgs e)
@@ -91,9 +76,6 @@ namespace _7_TTNT45K_Nhom05
             loaddata();
         }
 
-        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
 
         private void btnSuaKH_Click(object sender, EventArgs e)
         {
@@ -151,26 +133,17 @@ namespace _7_TTNT45K_Nhom05
             txtTen.Text = "";
             txtSDT.Text = "";
             txtSDT.Enabled = true;
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtTen_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTimkiem_TextChanged(object sender, EventArgs e)
-        {
-
+            txtTimkiem.Text = "";
         }
 
 
-
-
-       }
+    }
 }

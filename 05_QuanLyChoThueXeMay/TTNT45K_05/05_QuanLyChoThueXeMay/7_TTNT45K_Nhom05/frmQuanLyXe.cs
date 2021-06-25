@@ -12,18 +12,17 @@ namespace _7_TTNT45K_Nhom05
 {
     public partial class frmQuanLyXe : Form
     {
-
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DESKTOP-BL56DFD\SQLEXPRESS01;Initial Catalog=ChoThueXe;Integrated Security=True";
+        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
-        
 
         public frmQuanLyXe()
         {
             InitializeComponent();
         }
+       
         void loaddata()
         {
             command = connection.CreateCommand();
@@ -34,25 +33,6 @@ namespace _7_TTNT45K_Nhom05
             dgv.DataSource = table;
         }
 
-        private void MaXe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Chung_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -78,20 +58,6 @@ namespace _7_TTNT45K_Nhom05
             TKX.Close();
         }
 
-        private void cbTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmQuanLyXe_Load(object sender, EventArgs e)
         {
@@ -150,11 +116,6 @@ namespace _7_TTNT45K_Nhom05
             loaddata();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaXe.Enabled = false;
@@ -167,10 +128,7 @@ namespace _7_TTNT45K_Nhom05
             txtDonGia.Text = dgv.Rows[i].Cells[4].Value.ToString();
         }
 
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void btnXemLai_Click(object sender, EventArgs e)
         {
@@ -180,6 +138,14 @@ namespace _7_TTNT45K_Nhom05
             cbLoaiXe.Text = "";
             cbTinhTrang.Text = "";
             txtMaXe.Enabled = true;
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
+        }
+
+        private void btnXoaTim_Click(object sender, EventArgs e)
+        {
+            txtThongTinTK.Text = "";
         }
     }
 }

@@ -53,6 +53,7 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.MaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnXoaTim = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,7 +88,6 @@
             this.cbTinhTrang.Name = "cbTinhTrang";
             this.cbTinhTrang.Size = new System.Drawing.Size(295, 33);
             this.cbTinhTrang.TabIndex = 1;
-            this.cbTinhTrang.SelectedIndexChanged += new System.EventHandler(this.cbTinhTrang_SelectedIndexChanged);
             // 
             // txtDonGia
             // 
@@ -108,7 +108,6 @@
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(295, 31);
             this.txtMoTa.TabIndex = 2;
-            this.txtMoTa.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // DonGia
             // 
@@ -169,7 +168,6 @@
             this.MaXe.Size = new System.Drawing.Size(71, 25);
             this.MaXe.TabIndex = 1;
             this.MaXe.Text = "Mã xe";
-            this.MaXe.Click += new System.EventHandler(this.MaXe_Click);
             // 
             // txtMaXe
             // 
@@ -224,10 +222,10 @@
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnTimKiem.Location = new System.Drawing.Point(510, 29);
+            this.btnTimKiem.Location = new System.Drawing.Point(473, 29);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(127, 31);
+            this.btnTimKiem.Size = new System.Drawing.Size(115, 42);
             this.btnTimKiem.TabIndex = 9;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -244,7 +242,6 @@
             this.ThongTinTK.Size = new System.Drawing.Size(187, 25);
             this.ThongTinTK.TabIndex = 10;
             this.ThongTinTK.Text = "Nhập thông tin xe ";
-            this.ThongTinTK.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtThongTinTK
             // 
@@ -276,11 +273,10 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(57, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(699, 207);
+            this.groupBox1.Size = new System.Drawing.Size(716, 207);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin xe";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnXemLai
             // 
@@ -295,6 +291,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btnXoaTim);
             this.groupBox2.Controls.Add(this.btnTimKiem);
             this.groupBox2.Controls.Add(this.txtThongTinTK);
             this.groupBox2.Controls.Add(this.ThongTinTK);
@@ -302,7 +299,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox2.Location = new System.Drawing.Point(57, 248);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(693, 75);
+            this.groupBox2.Size = new System.Drawing.Size(716, 87);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
@@ -313,9 +310,9 @@
             this.groupBox3.Controls.Add(this.dgv);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.groupBox3.Location = new System.Drawing.Point(57, 329);
+            this.groupBox3.Location = new System.Drawing.Point(57, 351);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(626, 260);
+            this.groupBox3.Size = new System.Drawing.Size(710, 260);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chung";
@@ -344,9 +341,8 @@
             this.dgv.RowHeadersWidth = 10;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(468, 220);
+            this.dgv.Size = new System.Drawing.Size(602, 220);
             this.dgv.TabIndex = 0;
-            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // MaX
@@ -367,13 +363,22 @@
             this.label1.Size = new System.Drawing.Size(166, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "QUẢN LÝ XE";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // btnXoaTim
+            // 
+            this.btnXoaTim.Location = new System.Drawing.Point(593, 30);
+            this.btnXoaTim.Name = "btnXoaTim";
+            this.btnXoaTim.Size = new System.Drawing.Size(117, 41);
+            this.btnXoaTim.TabIndex = 11;
+            this.btnXoaTim.Text = "Xóa tìm";
+            this.btnXoaTim.UseVisualStyleBackColor = true;
+            this.btnXoaTim.Click += new System.EventHandler(this.btnXoaTim_Click);
             // 
             // frmQuanLyXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 605);
+            this.ClientSize = new System.Drawing.Size(805, 643);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -421,5 +426,6 @@
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaX;
         private System.Windows.Forms.Button btnXemLai;
+        private System.Windows.Forms.Button btnXoaTim;
     }
 }

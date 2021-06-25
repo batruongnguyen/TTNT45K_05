@@ -18,8 +18,8 @@ NgayThue date, GioThue time, NgayTra date, GioTra time,
 ThoiGianThue int,
 ThanhTien int)
 
-alter table THUE
-add constraint PK_THUE Primary Key (MaX,SoDT);
+/*alter table THUE
+add constraint PK_THUE Primary Key (MaX,SoDT);*/
 
 Alter table THUE drop constraint PK_THUE --Xoa lien ket
 
@@ -84,28 +84,27 @@ from THUE inner join XE on
 THUE.MaX=XE.MaX
 
 
-Update THUE
-Set ThanhTien=DonGiaThue*ThoiGianThue
-from THUE inner join XE on
-THUE.MaX=XE.MaX
 
+/*
 insert into Thue values 
 (
 	'0905113',
 	'D04',
 	'CMT',
-	'2015-10-25',
+	'2019-10-25',
+	'12:00',
+	'2019-10-26',
 	'12:00',
 	NULL,
-	NULL,
-	NULL,
 	NULL
-)
+)*/
 
 select * from Thue where MaX Like 'M%'
 select * from Thue where MaX Like 'D%'
 delete from Thue where MaHD = 13
 
 update Thue set NgayTra = '06/24/2021', GioTra = '2:00' where MaHD = 13
+
+
 
 
