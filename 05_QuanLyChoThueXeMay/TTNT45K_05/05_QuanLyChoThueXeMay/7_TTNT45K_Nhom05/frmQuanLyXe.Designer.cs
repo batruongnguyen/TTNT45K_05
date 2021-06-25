@@ -49,11 +49,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXemLai = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnXoaTim = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.MaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXoaTim = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -66,8 +66,8 @@
             this.cbLoaiXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cbLoaiXe.FormattingEnabled = true;
             this.cbLoaiXe.Items.AddRange(new object[] {
-            "Xe máy",
-            "Xe đạp"});
+            "Xe May",
+            "Xe Dap"});
             this.cbLoaiXe.Location = new System.Drawing.Point(157, 140);
             this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiXe.Name = "cbLoaiXe";
@@ -80,9 +80,9 @@
             this.cbTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cbTinhTrang.FormattingEnabled = true;
             this.cbTinhTrang.Items.AddRange(new object[] {
-            "Đang cho thuê",
-            "Sẵn có",
-            "Hỏng"});
+            "Dang cho thue",
+            "San co",
+            "Hong"});
             this.cbTinhTrang.Location = new System.Drawing.Point(157, 70);
             this.cbTinhTrang.Margin = new System.Windows.Forms.Padding(2);
             this.cbTinhTrang.Name = "cbTinhTrang";
@@ -304,6 +304,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
             // 
+            // btnXoaTim
+            // 
+            this.btnXoaTim.Location = new System.Drawing.Point(593, 30);
+            this.btnXoaTim.Name = "btnXoaTim";
+            this.btnXoaTim.Size = new System.Drawing.Size(117, 41);
+            this.btnXoaTim.TabIndex = 11;
+            this.btnXoaTim.Text = "Xóa tìm";
+            this.btnXoaTim.UseVisualStyleBackColor = true;
+            this.btnXoaTim.Click += new System.EventHandler(this.btnXoaTim_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -363,16 +373,6 @@
             this.label1.Size = new System.Drawing.Size(166, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "QUẢN LÝ XE";
-            // 
-            // btnXoaTim
-            // 
-            this.btnXoaTim.Location = new System.Drawing.Point(593, 30);
-            this.btnXoaTim.Name = "btnXoaTim";
-            this.btnXoaTim.Size = new System.Drawing.Size(117, 41);
-            this.btnXoaTim.TabIndex = 11;
-            this.btnXoaTim.Text = "Xóa tìm";
-            this.btnXoaTim.UseVisualStyleBackColor = true;
-            this.btnXoaTim.Click += new System.EventHandler(this.btnXoaTim_Click);
             // 
             // frmQuanLyXe
             // 

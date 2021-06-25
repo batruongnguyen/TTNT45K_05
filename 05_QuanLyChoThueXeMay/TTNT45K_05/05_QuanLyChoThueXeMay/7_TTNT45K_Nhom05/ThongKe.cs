@@ -51,13 +51,16 @@ namespace _7_TTNT45K_Nhom05
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cbMaXe.Text = dataGridView1.Rows[e.RowIndex].Cells["MaX"].Value.ToString();
-            cbTinhTrangXe.Text = dataGridView1.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();
-            if (cbTinhTrangXe.Text == "Đang cho thuê") 
+
+            string TinhTrangdgv;
+            TinhTrangdgv = dataGridView1.CurrentCell.Value.ToString();
+            if (TinhTrangdgv == "Dang cho thue" || TinhTrangdgv == "San co" || TinhTrangdgv == "Hong")
             {
-                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
-                dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayTra"].Value);
+                cbTinhTrangXe.Text = dataGridView1.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();
             }
+            cbMaXe.Text = dataGridView1.Rows[e.RowIndex].Cells["MaX"].Value.ToString();
+            
+            
 
             //Xử lý trường hợp nếu Ngày thuê ngày trả không có dữ liệu thì sao
 
@@ -83,16 +86,13 @@ namespace _7_TTNT45K_Nhom05
             }*/
             cbMaXe.Enabled = false;
             cbTinhTrangXe.Enabled = false;
-            dateTimePicker1.Enabled = false;
-            dateTimePicker2.Enabled = false;
-            
 
         }
         
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             //Tim Kiem theo tinh trang xe
-            if(cbTinhTrangXe.Text =="Đang cho thuê")
+            if(cbTinhTrangXe.Text =="Dang cho thue")
             {
                 SqlConnection ThongKe = new SqlConnection(sThongKe);
                 try
@@ -104,7 +104,7 @@ namespace _7_TTNT45K_Nhom05
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
 
-                string sQuery = "select XE.MaX, TinhTrang,NgayThue,NgayTra from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang='Đang cho thuê'";
+                string sQuery = "select XE.MaX, MoTa, Loai, NgayThue, GioThue from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang='Dang cho thue'";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
 
                 DataSet ds = new DataSet();
@@ -126,7 +126,7 @@ namespace _7_TTNT45K_Nhom05
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
 
-                string sQuery = "select XE.MaX, TinhTrang from XE  where TinhTrang='Hong'";
+                string sQuery = "select XE.MaX, MoTa, Loai from XE  where TinhTrang='Hong'";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
 
                 DataSet ds = new DataSet();
@@ -148,7 +148,7 @@ namespace _7_TTNT45K_Nhom05
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
 
-                string sQuery = "select XE.MaX, TinhTrang from XE  where TinhTrang='San co'";
+                string sQuery = "select XE.MaX, MoTa, Loai from XE  where TinhTrang='San co'";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
 
                 DataSet ds = new DataSet();
@@ -170,8 +170,9 @@ namespace _7_TTNT45K_Nhom05
                 {
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
+                
 
-                string sQuery1 = "select XE.MaX, TinhTrang,NgayThue,NgayTra from THUE right join XE on THUE.MaX=XE.MaX where XE.MaX like'%" + cbMaXe.Text + "%'";
+                string sQuery1 = "select XE.MaX,  MoTa, Loai, TinhTrang from THUE right join XE on THUE.MaX=XE.MaX where XE.MaX like'%" + cbMaXe.Text + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(sQuery1, ThongKe1);
 
                 DataSet ds1 = new DataSet();
@@ -181,20 +182,17 @@ namespace _7_TTNT45K_Nhom05
                 dataGridView1.DataSource = ds1.Tables["ThongKe"];
                 ThongKe1.Close();
             }
+            //Tim kiem theo Ngay Thue
         }
 
 
         private void btnXemLai_Click(object sender, EventArgs e)
         {
             cbTinhTrangXe.Text = "";
-            dateTimePicker1.Text = "";
-            dateTimePicker2.Text = "";
             txtDoanhThu.Text = "";
             cbMaXe.Text = "";
             cbMaXe.Enabled = true;
             cbTinhTrangXe.Enabled = true;
-            dateTimePicker1.Enabled = true;
-            dateTimePicker2.Enabled = true;
             dataGridView1.DataSource = null;      
         }
 
@@ -208,6 +206,10 @@ namespace _7_TTNT45K_Nhom05
         {
             cbMaXe.Enabled = false;
         }
+
+       
+
+        
 
     }
 }
