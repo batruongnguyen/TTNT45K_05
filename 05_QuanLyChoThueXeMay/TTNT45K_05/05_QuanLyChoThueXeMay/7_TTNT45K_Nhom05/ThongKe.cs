@@ -51,8 +51,7 @@ namespace _7_TTNT45K_Nhom05
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string TinhTrangdgv;
-            TinhTrangdgv = dataGridView1.CurrentCell.Value.ToString();
+            string TinhTrangdgv = dataGridView1.CurrentCell.Value.ToString();
             if (TinhTrangdgv == "Dang cho thue" || TinhTrangdgv == "San co" || TinhTrangdgv == "Hong")
             {
                 cbTinhTrangXe.Text = dataGridView1.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();

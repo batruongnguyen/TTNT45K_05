@@ -79,7 +79,6 @@ namespace _7_TTNT45K_Nhom05
             string queue = "select * from Thue ";
             if (cbbLoaiXe.SelectedItem.ToString() == "Xe Dap") queue += "where MaX Like 'D%'";
             else if (cbbLoaiXe.SelectedItem.ToString() == "Xe May") queue += "where MaX Like 'M%'";
-            dgvHD.DataSource = GetRecords(queue);
         }
 
         public void setcbbLoaiXe()
@@ -136,7 +135,7 @@ namespace _7_TTNT45K_Nhom05
             DateTime a = Convert.ToDateTime(dtNgayThue.Value);
             DateTime b = Convert.ToDateTime(dtNgayTra.Value);
             TimeSpan c = b.Subtract(a);
-            return Convert.ToInt32(c.TotalDays) + 1;
+            return Convert.ToInt32(c.TotalDays) + 0; 
         }
 
 
@@ -167,13 +166,11 @@ namespace _7_TTNT45K_Nhom05
         private void cbbSDT_SelectedIndexChanged(object sender, EventArgs e)
         {
             string query = "select * from Thue where SoDT = '" + cbbSDT.SelectedItem.ToString() + "'";
-            dgvHD.DataSource = GetRecords(query);
         }
 
         private void cbbMaXe_SelectedIndexChanged(object sender, EventArgs e)
         {
             string query = "select * from Thue where MaX = '" + cbbMaXe.SelectedItem.ToString() + "'";
-            dgvHD.DataSource = GetRecords(query);
         }
 
         private void btnTimKiemDT_Click(object sender, EventArgs e)
@@ -227,19 +224,7 @@ namespace _7_TTNT45K_Nhom05
                 }
             }
         }
-
-        private void dgvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        
-
-        
-
-        
-
-        
+  
     }
 }
 
