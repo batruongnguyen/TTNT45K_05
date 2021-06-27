@@ -150,6 +150,21 @@
   <ItemGroup>
     <None Include="Resources\Background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

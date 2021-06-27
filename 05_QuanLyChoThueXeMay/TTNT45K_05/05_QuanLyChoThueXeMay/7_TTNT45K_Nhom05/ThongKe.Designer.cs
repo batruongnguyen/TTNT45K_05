@@ -80,7 +80,7 @@
             "San co",
             "Hong"});
             this.cbTinhTrangXe.Location = new System.Drawing.Point(283, 206);
-            this.cbTinhTrangXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTinhTrangXe.Margin = new System.Windows.Forms.Padding(4);
             this.cbTinhTrangXe.Name = "cbTinhTrangXe";
             this.cbTinhTrangXe.Size = new System.Drawing.Size(287, 38);
             this.cbTinhTrangXe.TabIndex = 1;
@@ -88,16 +88,17 @@
             // 
             // btnThongKe
             // 
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnThongKe.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.search;
             this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnThongKe.Location = new System.Drawing.Point(604, 111);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(167, 65);
             this.btnThongKe.TabIndex = 2;
-            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // dataGridView1
@@ -107,7 +108,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(49, 64);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(607, 281);
             this.dataGridView1.TabIndex = 6;
@@ -116,15 +117,16 @@
             // 
             // btnXemLai
             // 
-            this.btnXemLai.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.undo1;
+            this.btnXemLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnXemLai.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.undo__1_;
             this.btnXemLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXemLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemLai.Location = new System.Drawing.Point(604, 196);
-            this.btnXemLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXemLai.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemLai.Name = "btnXemLai";
             this.btnXemLai.Size = new System.Drawing.Size(167, 62);
             this.btnXemLai.TabIndex = 3;
-            this.btnXemLai.UseVisualStyleBackColor = true;
+            this.btnXemLai.UseVisualStyleBackColor = false;
             this.btnXemLai.Click += new System.EventHandler(this.btnXemLai_Click);
             // 
             // label5
@@ -144,7 +146,7 @@
             this.txtDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.txtDoanhThu.Location = new System.Drawing.Point(283, 295);
-            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoanhThu.Name = "txtDoanhThu";
             this.txtDoanhThu.Size = new System.Drawing.Size(287, 37);
             this.txtDoanhThu.TabIndex = 11;
@@ -154,9 +156,9 @@
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(80, 378);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(691, 367);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -182,7 +184,7 @@
             this.cbMaXe.Items.AddRange(new object[] {
             "Tất cả xe"});
             this.cbMaXe.Location = new System.Drawing.Point(283, 111);
-            this.cbMaXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMaXe.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaXe.Name = "cbMaXe";
             this.cbMaXe.Size = new System.Drawing.Size(287, 38);
             this.cbMaXe.TabIndex = 0;
@@ -206,7 +208,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống Kê";

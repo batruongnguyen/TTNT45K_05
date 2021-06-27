@@ -225,7 +225,7 @@
             this.txtThanhTien.Location = new System.Drawing.Point(208, 287);
             this.txtThanhTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(240, 37);
+            this.txtThanhTien.Size = new System.Drawing.Size(191, 37);
             this.txtThanhTien.TabIndex = 9;
             this.txtThanhTien.TabStop = false;
             // 
@@ -348,15 +348,17 @@
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnThanhToan.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.cash_register;
-            this.btnThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThanhToan.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.payment;
+            this.btnThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThanhToan.Location = new System.Drawing.Point(456, 249);
+            this.btnThanhToan.Location = new System.Drawing.Point(407, 278);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(113, 76);
+            this.btnThanhToan.Size = new System.Drawing.Size(165, 47);
             this.btnThanhToan.TabIndex = 11;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 

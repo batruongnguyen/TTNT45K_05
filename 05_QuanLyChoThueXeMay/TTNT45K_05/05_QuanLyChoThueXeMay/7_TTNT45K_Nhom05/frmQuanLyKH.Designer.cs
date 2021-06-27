@@ -136,7 +136,7 @@
             // btnXemlai
             // 
             this.btnXemlai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnXemlai.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.undo;
+            this.btnXemlai.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.undo__1_;
             this.btnXemlai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXemlai.Location = new System.Drawing.Point(681, 113);
             this.btnXemlai.Name = "btnXemlai";
@@ -258,7 +258,7 @@
             // btnXoaTim
             // 
             this.btnXoaTim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnXoaTim.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.undo;
+            this.btnXoaTim.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.backspace;
             this.btnXoaTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXoaTim.Location = new System.Drawing.Point(682, 24);
             this.btnXoaTim.Name = "btnXoaTim";
