@@ -117,6 +117,39 @@
   <ItemGroup>
     <None Include="Resources\Download free illustration of Abstract beige wallpaper background image.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullSizeRender.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download free illustration of Abstract beige wallpaper background image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

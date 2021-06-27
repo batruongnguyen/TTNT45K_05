@@ -228,6 +228,11 @@ namespace _7_TTNT45K_Nhom05
             }
         }
 
+        private void dgvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         
 
         
