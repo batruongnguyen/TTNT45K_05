@@ -84,7 +84,6 @@ from THUE inner join XE on
 THUE.MaX=XE.MaX
 
 
-
 /*
 insert into Thue values 
 (

@@ -32,7 +32,6 @@ namespace _7_TTNT45K_Nhom05
         {
             SqlCommand cmd = new SqlCommand(sql, cmn);
             cmn.Open();
-            cmd.ExecuteNonQuery();
             cmn.Close();
         }
 
@@ -45,8 +44,9 @@ namespace _7_TTNT45K_Nhom05
         }
         public void loaddata()
         {
-            string query = "select * from Thue";
+            string query = "select MaHD, SoDT, MaX, DamBao, NgayThue, GioThue, NgayTra, GioTra,Thoigianthue, ThanhTien from Thue";
             dgvHD.DataSource = GetRecords(query);
+            txtMahoadon.Enabled = false;
         }
 
         public void setcbbSDT()
@@ -77,8 +77,8 @@ namespace _7_TTNT45K_Nhom05
                 cbbMaXe.Items.Add(i.ToString());
             }
             string queue = "select * from Thue ";
-            if (cbbLoaiXe.SelectedItem.ToString() == "Xe Đap") queue += "where MaX Like 'D%'";
-            else if (cbbLoaiXe.SelectedItem.ToString() == "Xe Máy") queue += "where MaX Like 'M%'";
+            if (cbbLoaiXe.SelectedItem.ToString() == "Xe Dap") queue += "where MaX Like 'D%'";
+            else if (cbbLoaiXe.SelectedItem.ToString() == "Xe May") queue += "where MaX Like 'M%'";
             dgvHD.DataSource = GetRecords(queue);
         }
 
@@ -98,15 +98,15 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnThemDT_Click(object sender, EventArgs e)
         {
-            if (cbbSDT.SelectedItem == null || cbbMaXe.SelectedItem == null || cbbDamBao.SelectedItem == null || txtGioThue.Text == "")
+            if (cbbSDT.SelectedItem == null || cbbMaXe.SelectedItem == null || cbDamBao.SelectedItem == null || txtGioThue.Text == "")
             {
-                MessageBox.Show("Vui long dien du thong tin");
+                MessageBox.Show("Vui lòng điền đủ thông tin","Thông báo");
             }
             else
             {
                 string SDT = cbbSDT.SelectedItem.ToString();
                 string MaX = cbbMaXe.SelectedItem.ToString();
-                string DamBao = cbbDamBao.SelectedItem.ToString();
+                string DamBao = cbDamBao.SelectedItem.ToString();
                 DateTime NgayThue = Convert.ToDateTime(dtNgayThue.Value);
                 string GioThue = txtGioThue.Text;
                 string query = "Insert into Thue values ('";
@@ -122,7 +122,7 @@ namespace _7_TTNT45K_Nhom05
         {
             if (txtDonGiaThue.Text == "")
             {
-                MessageBox.Show("Vui long dien du thong tin");
+                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo");
             }
             else
             {
@@ -145,7 +145,7 @@ namespace _7_TTNT45K_Nhom05
         {
             if (txtGioTra.Text == "" || txtDonGiaThue.Text == "")
             {
-                MessageBox.Show("Vui long dien du thong tin");
+                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo");
             }
             else
             {
@@ -162,17 +162,49 @@ namespace _7_TTNT45K_Nhom05
             loaddata();
         }
 
+        
+
+        private void cbbSDT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "select * from Thue where SoDT = '" + cbbSDT.SelectedItem.ToString() + "'";
+            dgvHD.DataSource = GetRecords(query);
+        }
+
+        private void cbbMaXe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "select * from Thue where MaX = '" + cbbMaXe.SelectedItem.ToString() + "'";
+            dgvHD.DataSource = GetRecords(query);
+        }
+
+        private void btnTimKiemDT_Click(object sender, EventArgs e)
+        {
+            string query = "select * from Thue where MaHD = '" + txtMahoadon.Text + "'";
+            dgvHD.DataSource = GetRecords(query);
+        }
+
+        private void btnHuyDT_Click(object sender, EventArgs e)
+        {
+            loaddata();
+            txtGioThue.Text = "";
+            dtNgayThue.Text = "";
+            cbDamBao.Text = "";
+        }
+
+        
+
+        
+
         private void dgvHD_MouseClick(object sender, MouseEventArgs e)
         {
             string MaX = "";
             int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells["MaHD"].Value);
-            string query = "select * from Thue where MaHD = " + MaHD;
+            string query = "select * from Thue where MaHD = ' " + MaHD + "'";
             foreach (DataRow i in GetRecords(query).Rows)
             {
                 cbbSDT.Text = i["SoDT"].ToString();
                 cbbMaXe.Text = i["MaX"].ToString();
-                cbbDamBao.Text = i["DamBao"].ToString();
-                txtMaHoaDon.Text = i["MaHD"].ToString();
+                cbDamBao.Text = i["DamBao"].ToString();
+                txtMahoadon.Text = i["MaHD"].ToString();
                 dtNgayThue.Value = Convert.ToDateTime(i["NgayThue"].ToString());
                 txtGioThue.Text = i["GioThue"].ToString();
                 if (i["NgayTra"].ToString() == "")
@@ -196,49 +228,11 @@ namespace _7_TTNT45K_Nhom05
             }
         }
 
-        private void bntSuaDT_Click(object sender, EventArgs e)
-        {
-            int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells["MaHD"].Value);
-            string SDT = cbbSDT.SelectedItem.ToString();
-            string MaX = cbbMaXe.SelectedItem.ToString();
-            string DamBao = cbbDamBao.SelectedItem.ToString();
-            DateTime NgayThue = Convert.ToDateTime(dtNgayThue.Value);
-            string GioThue = txtGioThue.Text;
-            string query = "update Thue set SoDT = '" + SDT + "', MaX = '" + MaX + "', DamBao = '"
-                + DamBao + "', NgayThue = '" + NgayThue.ToShortDateString() + "', GioThue = '"
-                + GioThue.ToString() + "' where MaHD = " + MaHD;
-            ExcuteDB(query);
-            loaddata();
-        }
-
-        private void cbbSDT_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string query = "select * from Thue where SoDT = '" + cbbSDT.SelectedItem.ToString() + "'";
-            dgvHD.DataSource = GetRecords(query);
-        }
-
-        private void cbbMaXe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string query = "select * from Thue where MaX = '" + cbbMaXe.SelectedItem.ToString() + "'";
-            dgvHD.DataSource = GetRecords(query);
-        }
-
-        private void btnTimKiemDT_Click(object sender, EventArgs e)
-        {
-            string query = "select * from Thue where MaHD = '" + txtMaHoaDon.Text + "'";
-            dgvHD.DataSource = GetRecords(query);
-        }
-
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            loaddata();
-        }
-
-        
         
 
-       
+        
 
+        
 
         
     }

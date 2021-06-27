@@ -48,6 +48,9 @@
             this.btnXoaTim = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -129,7 +132,7 @@
             this.btnXemlai.Location = new System.Drawing.Point(681, 113);
             this.btnXemlai.Name = "btnXemlai";
             this.btnXemlai.Size = new System.Drawing.Size(106, 41);
-            this.btnXemlai.TabIndex = 1;
+            this.btnXemlai.TabIndex = 6;
             this.btnXemlai.Text = "Xem ";
             this.btnXemlai.UseVisualStyleBackColor = true;
             this.btnXemlai.Click += new System.EventHandler(this.btnXemlai_Click);
@@ -201,7 +204,7 @@
             this.btnTimkiemKH.Location = new System.Drawing.Point(562, 24);
             this.btnTimkiemKH.Name = "btnTimkiemKH";
             this.btnTimkiemKH.Size = new System.Drawing.Size(114, 41);
-            this.btnTimkiemKH.TabIndex = 7;
+            this.btnTimkiemKH.TabIndex = 8;
             this.btnTimkiemKH.Text = "Tìm kiếm";
             this.btnTimkiemKH.UseVisualStyleBackColor = true;
             this.btnTimkiemKH.Click += new System.EventHandler(this.btnTimkiemKH_Click);
@@ -213,7 +216,7 @@
             this.txtTimkiem.Location = new System.Drawing.Point(213, 29);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(324, 31);
-            this.txtTimkiem.TabIndex = 6;
+            this.txtTimkiem.TabIndex = 7;
             // 
             // label5
             // 
@@ -247,7 +250,7 @@
             this.btnXoaTim.Location = new System.Drawing.Point(682, 24);
             this.btnXoaTim.Name = "btnXoaTim";
             this.btnXoaTim.Size = new System.Drawing.Size(105, 41);
-            this.btnXoaTim.TabIndex = 10;
+            this.btnXoaTim.TabIndex = 9;
             this.btnXoaTim.Text = "Xóa tìm ";
             this.btnXoaTim.UseVisualStyleBackColor = true;
             this.btnXoaTim.Click += new System.EventHandler(this.button1_Click);
@@ -267,14 +270,42 @@
             // 
             // dgv1
             // 
+            this.dgv1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SoDT,
+            this.Ten,
+            this.DiaChi});
             this.dgv1.Location = new System.Drawing.Point(38, 35);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(731, 285);
+            this.dgv1.Size = new System.Drawing.Size(728, 285);
             this.dgv1.TabIndex = 0;
             this.dgv1.TabStop = false;
             this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
+            // 
+            // SoDT
+            // 
+            this.SoDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoDT.DataPropertyName = "SoDT";
+            this.SoDT.HeaderText = "Số điện thoại";
+            this.SoDT.MaxInputLength = 327670;
+            this.SoDT.Name = "SoDT";
+            // 
+            // Ten
+            // 
+            this.Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten.DataPropertyName = "Ten";
+            this.Ten.HeaderText = "Họ và tên";
+            this.Ten.Name = "Ten";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
             // 
             // frmQuanLyKH
             // 
@@ -327,5 +358,8 @@
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button btnXemlai;
         private System.Windows.Forms.Button btnXoaTim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
     }
 }

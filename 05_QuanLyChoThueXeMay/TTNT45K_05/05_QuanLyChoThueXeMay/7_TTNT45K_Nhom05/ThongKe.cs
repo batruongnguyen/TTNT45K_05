@@ -46,12 +46,11 @@ namespace _7_TTNT45K_Nhom05
             }
             ThongKe.Close();
             txtDoanhThu.Enabled = false;
-  
         }
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             string TinhTrangdgv;
             TinhTrangdgv = dataGridView1.CurrentCell.Value.ToString();
             if (TinhTrangdgv == "Dang cho thue" || TinhTrangdgv == "San co" || TinhTrangdgv == "Hong")
@@ -59,34 +58,8 @@ namespace _7_TTNT45K_Nhom05
                 cbTinhTrangXe.Text = dataGridView1.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();
             }
             cbMaXe.Text = dataGridView1.Rows[e.RowIndex].Cells["MaX"].Value.ToString();
-            
-            
-
-            //Xử lý trường hợp nếu Ngày thuê ngày trả không có dữ liệu thì sao
-
-            /* Code ngày chọn mục không có ngày thuê, ngày trả
-             if(dateTimePicker1.Value!=null)
-            {
-                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayThue"].Value);
-
-            }
-            else
-            {
-                dateTimePicker1.Value = new DateTime(06, 20, 2021);
-                MessageBox.Show("Thông báo", "Xe này chưa được thuê!");
-            }
-            if (dateTimePicker2.Value != null)
-            {
-                dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["NgayTra"].Value);
-            }
-            else
-            {
-                dateTimePicker2.Value = new DateTime(06, 20, 2021);
-                MessageBox.Show("Thông báo", "Xe này chưa được thuê!");
-            }*/
             cbMaXe.Enabled = false;
             cbTinhTrangXe.Enabled = false;
-
         }
         
         private void btnThongKe_Click(object sender, EventArgs e)
@@ -104,7 +77,7 @@ namespace _7_TTNT45K_Nhom05
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
 
-                string sQuery = "select XE.MaX, MoTa, Loai, NgayThue, GioThue from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang='Dang cho thue'";
+                string sQuery = "select XE.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại', NgayThue as 'Ngày thuê', ThanhTien as 'Thành tiền' from THUE right join XE on THUE.MaX=XE.MaX where TinhTrang='Dang cho thue'";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
 
                 DataSet ds = new DataSet();
@@ -126,7 +99,7 @@ namespace _7_TTNT45K_Nhom05
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
 
-                string sQuery = "select XE.MaX, MoTa, Loai from XE  where TinhTrang='Hong'";
+                string sQuery = "select XE.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại' from XE  where TinhTrang='Hong'";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
 
                 DataSet ds = new DataSet();
@@ -148,7 +121,7 @@ namespace _7_TTNT45K_Nhom05
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
 
-                string sQuery = "select XE.MaX, MoTa, Loai from XE  where TinhTrang='San co'";
+                string sQuery = "select XE.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại' from XE  where TinhTrang='San co'";
                 SqlDataAdapter adapter = new SqlDataAdapter(sQuery, ThongKe);
 
                 DataSet ds = new DataSet();
@@ -170,9 +143,9 @@ namespace _7_TTNT45K_Nhom05
                 {
                     MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
                 }
-                
 
-                string sQuery1 = "select XE.MaX,  MoTa, Loai, TinhTrang from THUE right join XE on THUE.MaX=XE.MaX where XE.MaX like'%" + cbMaXe.Text + "%'";
+
+                string sQuery1 = "select XE.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại' ,TinhTrang as 'Tình trạng', ThanhTien as 'Thành tiền' from THUE right join XE on THUE.MaX=XE.MaX where XE.MaX like'%" + cbMaXe.Text + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(sQuery1, ThongKe1);
 
                 DataSet ds1 = new DataSet();
@@ -182,7 +155,24 @@ namespace _7_TTNT45K_Nhom05
                 dataGridView1.DataSource = ds1.Tables["ThongKe"];
                 ThongKe1.Close();
             }
-            //Tim kiem theo Ngay Thue
+            //Doanh thu theo tinh trang xe
+            
+                SqlConnection ThongKe2 = new SqlConnection(sThongKe);
+                try
+                {
+                    ThongKe2.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+                }
+            if (cbTinhTrangXe.Text == "Dang cho thue") 
+            {
+                string DT = "select sum(ThanhTien) from THUE";
+                cmd = new SqlCommand(DT, ThongKe2);
+                int a = int.Parse(cmd.ExecuteScalar().ToString());
+                txtDoanhThu.Text = a.ToString();
+            }
         }
 
 
@@ -207,9 +197,6 @@ namespace _7_TTNT45K_Nhom05
             cbMaXe.Enabled = false;
         }
 
-       
-
         
-
     }
 }

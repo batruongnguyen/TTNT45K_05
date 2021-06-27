@@ -53,6 +53,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.MaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mota1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Loai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dongiathue1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -334,7 +338,11 @@
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaX});
+            this.MaX,
+            this.TinhTrang1,
+            this.mota1,
+            this.Loai1,
+            this.Dongiathue1});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -345,22 +353,50 @@
             this.dgv.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.dgv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv.Location = new System.Drawing.Point(91, 28);
+            this.dgv.Location = new System.Drawing.Point(42, 28);
             this.dgv.Margin = new System.Windows.Forms.Padding(2);
             this.dgv.Name = "dgv";
-            this.dgv.RowHeadersWidth = 10;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(602, 220);
+            this.dgv.Size = new System.Drawing.Size(651, 220);
             this.dgv.TabIndex = 0;
+            this.dgv.TabStop = false;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // MaX
             // 
+            this.MaX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaX.DataPropertyName = "MaX";
             this.MaX.HeaderText = "Mã Xe";
             this.MaX.Name = "MaX";
-            this.MaX.Width = 99;
+            // 
+            // TinhTrang1
+            // 
+            this.TinhTrang1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TinhTrang1.DataPropertyName = "TinhTrang";
+            this.TinhTrang1.HeaderText = "Tình Trạng";
+            this.TinhTrang1.Name = "TinhTrang1";
+            // 
+            // mota1
+            // 
+            this.mota1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mota1.DataPropertyName = "MoTa";
+            this.mota1.HeaderText = "Mô tả";
+            this.mota1.Name = "mota1";
+            // 
+            // Loai1
+            // 
+            this.Loai1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Loai1.DataPropertyName = "Loai";
+            this.Loai1.HeaderText = "Loại";
+            this.Loai1.Name = "Loai1";
+            // 
+            // Dongiathue1
+            // 
+            this.Dongiathue1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Dongiathue1.DataPropertyName = "DonGiaThue";
+            this.Dongiathue1.HeaderText = "Đơn giá thuê";
+            this.Dongiathue1.Name = "Dongiathue1";
             // 
             // label1
             // 
@@ -424,8 +460,12 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaX;
         private System.Windows.Forms.Button btnXemLai;
         private System.Windows.Forms.Button btnXoaTim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mota1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Loai1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dongiathue1;
     }
 }
