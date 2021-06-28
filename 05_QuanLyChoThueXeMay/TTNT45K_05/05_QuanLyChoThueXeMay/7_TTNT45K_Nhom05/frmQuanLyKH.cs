@@ -45,35 +45,66 @@ namespace _7_TTNT45K_Nhom05
         private void btnThemKH_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into KHACH values('" + txtSDT.Text + "','" + txtTen.Text + "','" + txtDiachi.Text + "')";
-            try
+            command.CommandText = "insert into KHACH values('" + txtSDT.Text + "',N'" + txtTen.Text + "',N'" + txtDiachi.Text + "')";
+            
+            if (txtDiachi.Text == "" || txtTen.Text == "" || txtSDT.Text == "")
             {
-                command.ExecuteNonQuery();
-                MessageBox.Show("Thêm thành công!", "Thông báo");
-            }
-            catch (Exception ex)
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
+            }else
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công!", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
+                }
+                loaddata();
             }
-            loaddata();
+
+            
         }
 
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "delete from KHACH where SoDT='" + txtSDT.Text + "'";
-            command.ExecuteNonQuery();
+            bool flag = true;
             try
             {
+                command = connection.CreateCommand();
+                command.CommandText = "delete from KHACH where SoDT='" + txtSDT.Text + "'";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Xóa thành công!", "Thông báo");
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
-
+                MessageBox.Show("Bị lỗi ràng buộc! Không thể xóa khách hàng này!","Thông báo");
+                flag = false;
             }
-            loaddata();
+            finally
+            {
+                if (flag == true)
+                {
+                    var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                    if (confirmResult == DialogResult.OK)
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Xóa thành công!", "Thông báo");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                        }
+                        loaddata();
+                        txtDiachi.Text = "";
+                        txtSDT.Text = "";
+                        txtTen.Text = "";
+                        txtSDT.Enabled = true;
+                    }
+                }
+            }   
         }
 
 
@@ -82,7 +113,7 @@ namespace _7_TTNT45K_Nhom05
             command = connection.CreateCommand();
             command.CommandText = "update KHACH set Ten=N'" + txtTen.Text + "',DiaChi='" + txtDiachi.Text + "'where SoDT='" + txtSDT.Text + "'";
             command.ExecuteNonQuery();
-
+     
             try
             {
                 command.ExecuteNonQuery();
@@ -107,7 +138,7 @@ namespace _7_TTNT45K_Nhom05
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
 
-            string sQuery = "select KHACH.SoDT,Ten, DiaChi from KHACH where Ten like '%" + txtTimkiem.Text + "%'or SoDT like '%" + txtTimkiem.Text + "%'or DiaChi like '%" + txtTimkiem.Text + "%' ";
+            string sQuery = "select KHACH.SoDT,Ten, DiaChi from KHACH where Ten like N'%" + txtTimkiem.Text + "%'or SoDT like '%" + txtTimkiem.Text + "%'or DiaChi like '%" + txtTimkiem.Text + "%' ";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TK);
 
             DataSet ds = new DataSet();
@@ -143,6 +174,8 @@ namespace _7_TTNT45K_Nhom05
         {
             txtTimkiem.Text = "";
         }
+
+        
 
         
 

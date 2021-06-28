@@ -46,7 +46,7 @@ namespace _7_TTNT45K_Nhom05
                 MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
             }
 
-            string sQuery = "select XE.MaX,TinhTrang, MoTa, Loai, DonGiaThue from XE where MaX like '%" + txtThongTinTK.Text + "%'or TinhTrang like '%" + txtThongTinTK.Text + "%'or Loai like '%" + txtThongTinTK.Text + "%' or MoTa like '%" + txtThongTinTK.Text + "%' or DonGiaThue like '%" + txtThongTinTK.Text + "%' ";
+            string sQuery = "select XE.MaX,TinhTrang, MoTa, Loai, DonGiaThue from XE where MaX like '%" + txtThongTinTK.Text + "%'or TinhTrang like N'%" + txtThongTinTK.Text + "%'or Loai like N'%" + txtThongTinTK.Text + "%' or MoTa like N'%" + txtThongTinTK.Text + "%' or DonGiaThue like '%" + txtThongTinTK.Text + "%' ";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TKX);
 
             DataSet ds = new DataSet();
@@ -69,35 +69,65 @@ namespace _7_TTNT45K_Nhom05
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "','" + cbTinhTrang.Text + "',N'" + txtMoTa.Text + "','" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";   
-            try
+            command.CommandText = "Insert into XE values('" + txtMaXe.Text + "',N'" + cbTinhTrang.Text + "',N'" + txtMoTa.Text + "',N'" + cbLoaiXe.Text + "','" + txtDonGia.Text + "')";
+            if (txtDonGia.Text == "" || txtMaXe.Text == "" || txtMoTa.Text == "" || cbLoaiXe.Text == "" || cbTinhTrang.Text == "") 
             {
-                command.ExecuteNonQuery();
-                MessageBox.Show("Thêm thành công!", "Thông báo");
-            }
-            catch (Exception ex)
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
+            }else
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
-            }
-            loaddata(); 
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công!", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
+                }
+                loaddata(); 
+            }         
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "delete from XE where MaX='" + txtMaXe.Text + "'";
-            command.ExecuteNonQuery();
+            bool flag = true;
             try
             {
+                command = connection.CreateCommand();
+                command.CommandText = "delete from XE where MaX='" + txtMaXe.Text + "'";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Xóa thành công!", "Thông báo");
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
-
+                MessageBox.Show("Bị lỗi ràng buộc! Không thể xóa khách hàng này!", "Thông báo");
+                flag = false;
             }
-            loaddata();
+            finally
+            {
+                if (flag == true)
+                {
+                    var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                    if (confirmResult == DialogResult.OK)
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Xóa thành công!", "Thông báo");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                        }
+                        loaddata();
+                        txtMaXe.Text = "";
+                        cbTinhTrang.Text = "";
+                        txtMoTa.Text = "";
+                        cbLoaiXe.Text = "";
+                        txtDonGia.Text = "";
+                        txtMaXe.Enabled = true;
+                    }
+                }
+            }   
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -147,5 +177,11 @@ namespace _7_TTNT45K_Nhom05
         {
             txtThongTinTK.Text = "";
         }
+
+        private void cbLoaiXe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLoaiXe.SelectedItem.ToString() == "Xe Đạp") txtDonGia.Text = "500";
+            else if (cbLoaiXe.SelectedItem.ToString() == "Xe Máy") txtDonGia.Text = "1000";
+        }      
     }
 }

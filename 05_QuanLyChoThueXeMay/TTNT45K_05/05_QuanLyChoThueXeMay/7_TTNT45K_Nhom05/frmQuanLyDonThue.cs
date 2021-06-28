@@ -31,7 +31,15 @@ namespace _7_TTNT45K_Nhom05
         public void ExcuteDB(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, cmn);
-            cmn.Open();
+            try
+            {
+                cmn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(sql + "\n"+ex.Message);
+            }
             cmn.Close();
         }
 
@@ -44,7 +52,7 @@ namespace _7_TTNT45K_Nhom05
         }
         public void loaddata()
         {
-            string query = "select MaHD, SoDT, MaX, DamBao, NgayThue, GioThue, NgayTra, GioTra,Thoigianthue, ThanhTien from Thue";
+            string query = "select MaHD, SoDT, MaX,Thoigianthue, ThanhTien, TinhTrang from Thue";
             dgvHD.DataSource = GetRecords(query);
             txtMahoadon.Enabled = false;
         }
@@ -65,10 +73,11 @@ namespace _7_TTNT45K_Nhom05
 
         private void cbbLoaiXe_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //load cbb Mã Xe
             cbbMaXe.Items.Clear();
-            string query = "select distinct MaX from Xe where Loai = '" + cbbLoaiXe.SelectedItem.ToString() + "'";
+            string querry1 = "select distinct MaX from Xe where TinhTrang = N'Sẵn có' and Loai = N'" + cbbLoaiXe.SelectedItem.ToString() + "'";
             List<string> MaXe = new List<string>();
-            foreach (DataRow i in GetRecords(query).Rows)
+            foreach (DataRow i in GetRecords(querry1).Rows)
             {
                 MaXe.Add(i["MaX"].ToString());
             }
@@ -76,9 +85,19 @@ namespace _7_TTNT45K_Nhom05
             {
                 cbbMaXe.Items.Add(i.ToString());
             }
-            string queue = "select * from Thue ";
-            if (cbbLoaiXe.SelectedItem.ToString() == "Xe Dap") queue += "where MaX Like 'D%'";
-            else if (cbbLoaiXe.SelectedItem.ToString() == "Xe May") queue += "where MaX Like 'M%'";
+
+            //phân loại Mã xe theo từng Loại Xe 
+            string querry2 = "select * from Thue ";
+            if (cbbLoaiXe.SelectedItem.ToString() == "Xe Đạp") querry2 += "where MaX Like 'D%'";
+            else if (cbbLoaiXe.SelectedItem.ToString() == "Xe Máy") querry2 += "where MaX Like 'M%'";
+
+            //load thanh tien vao textbox
+            cmn.Open();
+            string querry3 = "select distinct DonGiaThue from Xe where Loai = N'" + cbbLoaiXe.SelectedItem.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(querry3, cmn);
+            txtDonGiaThue.Text = cmd.ExecuteScalar().ToString();
+            cmd.Dispose();
+            cmn.Close();
         }
 
         public void setcbbLoaiXe()
@@ -94,12 +113,12 @@ namespace _7_TTNT45K_Nhom05
                 cbbLoaiXe.Items.Add(i.ToString());
             }
         }
-
+        //nó không thêm được bạn, có mic kh tui nói cho b dễ hình dung, vô dí đi bạn
         private void btnThemDT_Click(object sender, EventArgs e)
         {
-            if (cbbSDT.SelectedItem == null || cbbMaXe.SelectedItem == null || cbDamBao.SelectedItem == null || txtGioThue.Text == "")
+            if (cbbSDT.SelectedItem == null || cbbMaXe.SelectedItem == null || cbDamBao.SelectedItem == null || dtGioThue.Text == "")
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin","Thông báo");
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
             else
             {
@@ -107,26 +126,38 @@ namespace _7_TTNT45K_Nhom05
                 string MaX = cbbMaXe.SelectedItem.ToString();
                 string DamBao = cbDamBao.SelectedItem.ToString();
                 DateTime NgayThue = Convert.ToDateTime(dtNgayThue.Value);
-                string GioThue = txtGioThue.Text;
+                DateTime GioThue = Convert.ToDateTime(dtGioThue.Value);
                 string query = "Insert into Thue values ('";
-                query = query + SDT + "' , '" + MaX + "' , '" + DamBao
-                    + "' ,'" + NgayThue.ToShortDateString() + "' , '" + GioThue
-                    + "', NULL, NULL, NULL, NULL)";
+                query = query + SDT + "' , '" + MaX + "' , N'" + DamBao
+                    + "' ,'" + NgayThue.ToString("yyyy-MM-dd") + "' , '" + GioThue.ToString("HH:mm:ss")
+                    + "', NULL, NULL, NULL, NULL,0)";
                 ExcuteDB(query);
             }
             loaddata();
+            
         }
 
         private void btnThanhTien_Click(object sender, EventArgs e)
         {
             if (txtDonGiaThue.Text == "")
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo");
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
             else
             {
                 int Total = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
                 txtThanhTien.Text = Total.ToString();
+
+                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
+                DateTime NgayTra = Convert.ToDateTime(dtNgayTra.Value);
+                DateTime GioTra = Convert.ToDateTime(dtGioTra.Value);
+                int ThoiGianThue = TGThue();
+                int ThanhTien = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
+                string query = "update Thue set NgayTra = '" + NgayTra.ToString("yyyy-MM-dd")
+                    + "' , GioTra = '" + GioTra.ToString("HH:mm:ss") + "', ThoiGianThue = " + ThoiGianThue
+                    + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
+                ExcuteDB(query);
+                loaddata();
             }
         }
 
@@ -134,29 +165,42 @@ namespace _7_TTNT45K_Nhom05
         {
             DateTime a = Convert.ToDateTime(dtNgayThue.Value);
             DateTime b = Convert.ToDateTime(dtNgayTra.Value);
+            DateTime d = Convert.ToDateTime(dtGioThue.Value);
+            DateTime f = Convert.ToDateTime(dtGioTra.Value);
+
             TimeSpan c = b.Subtract(a);
-            return Convert.ToInt32(c.TotalDays) + 0; 
+            TimeSpan span = f.Subtract(d);
+            double TotalMinutes = span.TotalMinutes;
+            if(TotalMinutes>0)
+            {
+                return Convert.ToInt32(c.TotalDays) + 1; 
+            }else
+            {
+                return Convert.ToInt32(c.TotalDays) + 0;
+            }
         }
 
 
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if (txtGioTra.Text == "" || txtDonGiaThue.Text == "")
+
+            if (dtGioTra.Text == "" || txtDonGiaThue.Text == "")
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin", "Thông báo");
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ", "Thông báo");
             }
             else
             {
-                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells["MaHD"].Value);
-                DateTime NgayTra = Convert.ToDateTime(dtNgayTra.Value);
-                string GioTra = txtGioTra.Text;
-                int ThoiGianThue = TGThue();
-                int ThanhTien = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
-                string query = "update Thue set NgayTra = '" + NgayTra.ToShortDateString()
-                + "' , GioTra = '" + GioTra.ToString() + "', ThoiGianThue = " + ThoiGianThue
-                + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
-                ExcuteDB(query);
+                if (bool.Parse(dgvHD.CurrentRow.Cells[5].Value.ToString()) == false)
+                {
+                    int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
+                    string query = "update Thue set TinhTrang = 1" + "where MaHD = " + MaHD;
+                    ExcuteDB(query);
+                }
+                else
+                {
+                    MessageBox.Show("Đơn xe này đã được thanh toán!");
+                }
             }
             loaddata();
         }
@@ -166,35 +210,35 @@ namespace _7_TTNT45K_Nhom05
         private void cbbSDT_SelectedIndexChanged(object sender, EventArgs e)
         {
             string query = "select * from Thue where SoDT = '" + cbbSDT.SelectedItem.ToString() + "'";
+
         }
 
         private void cbbMaXe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select * from Thue where MaX = '" + cbbMaXe.SelectedItem.ToString() + "'";
-        }
-
-        private void btnTimKiemDT_Click(object sender, EventArgs e)
-        {
-            string query = "select * from Thue where MaHD = '" + txtMahoadon.Text + "'";
-            dgvHD.DataSource = GetRecords(query);
+            string query = "select * from Thue where Max = N'" + cbbMaXe.SelectedItem.ToString() + "'";
         }
 
         private void btnHuyDT_Click(object sender, EventArgs e)
         {
             loaddata();
-            txtGioThue.Text = "";
+            dtGioThue.Text = "";
             dtNgayThue.Text = "";
             cbDamBao.Text = "";
-        }
+            txtMahoadon.Text = "";
+            cbbSDT.Text = "";
+            cbbLoaiXe.Text = "";
+            cbbMaXe.Text = "";
+            dtNgayTra.Text = "";
+            dtGioTra.Text = "";
+            txtDonGiaThue.Text = "";
+            txtThanhTien.Text = "";
+        }      
 
-        
-
-        
-
-        private void dgvHD_MouseClick(object sender, MouseEventArgs e)
+        private void dgvHD_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+
             string MaX = "";
-            int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells["MaHD"].Value);
+            int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
             string query = "select * from Thue where MaHD = ' " + MaHD + "'";
             foreach (DataRow i in GetRecords(query).Rows)
             {
@@ -203,17 +247,17 @@ namespace _7_TTNT45K_Nhom05
                 cbDamBao.Text = i["DamBao"].ToString();
                 txtMahoadon.Text = i["MaHD"].ToString();
                 dtNgayThue.Value = Convert.ToDateTime(i["NgayThue"].ToString());
-                txtGioThue.Text = i["GioThue"].ToString();
+                dtGioThue.Value = Convert.ToDateTime(i["GioThue"].ToString());
                 if (i["NgayTra"].ToString() == "")
                 {
                     dtNgayTra.Value = DateTime.Now;
-                    txtGioTra.Text = "";
+                    dtGioTra.Value = DateTime.Now;
                     txtThanhTien.Text = "";
                 }
                 else
                 {
                     dtNgayTra.Value = Convert.ToDateTime(i["NgayTra"].ToString());
-                    txtGioTra.Text = i["GioTra"].ToString();
+                    dtGioTra.Value = Convert.ToDateTime(i["GioTra"].ToString());
                     txtThanhTien.Text = i["ThanhTien"].ToString();
                 }
                 query = "select Loai, DonGiaThue from Xe where MaX = '" + i["MaX"].ToString() + "'";
@@ -224,7 +268,17 @@ namespace _7_TTNT45K_Nhom05
                 }
             }
         }
-  
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvHD.CurrentCell != null)
+            {
+                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
+                string query = "delete from Thue where MaHD = " + MaHD;
+                ExcuteDB(query);
+                loaddata();
+            }
+        }
     }
 }
 

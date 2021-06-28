@@ -1,5 +1,5 @@
-﻿create database ChoThueXe
-use ChoThueXe
+﻿create database choThueXe
+use choThueXe
 
 create table XE(MaX varchar(5) not null primary key,
 TinhTrang nvarchar(50) not null, 
@@ -16,7 +16,8 @@ MaX varchar(5) not null,
 DamBao nvarchar(50) not null,
 NgayThue date, GioThue time, NgayTra date, GioTra time,
 ThoiGianThue int,
-ThanhTien int)
+ThanhTien int,
+TinhTrang bit)
 
 /*alter table THUE
 add constraint PK_THUE Primary Key (MaX,SoDT);
@@ -33,37 +34,38 @@ Alter table THUE drop constraint FK_XE --Xoa lien ket
 Alter table THUE drop constraint FK_KHACH --Xoa lien ket
 
 Insert into XE
-values ('D01', 'Dang cho thue', 'Mau Vang', 'Xe Dap', '500'),
-('D02', 'Hong', 'Mau Nau', 'Xe Dap', '500'),
-('D03', 'San co', 'Mau Den', 'Xe Dap', '500'),
-('M01', 'Dang cho thue', 'Mau Vang', 'Xe May', '1000'),
-('M02', 'San co', 'Mau Vang', 'Xe May', '1000'),
-('M03', 'Dang cho thue', 'Mau Xanh', 'Xe May', '1000'),
-('M04', 'Hong', 'Mau Vang', 'Xe May', '1000'),
-('M05', 'Dang cho thue', 'Mau Xanh', 'Xe May', '1000'),
-('M06', 'San co', 'Mau Xanh', 'Xe May', '1000'),
-('M07', 'Hong', 'Mau Trang', 'Xe May', '1000'),
-('D04', 'Dang cho thue', 'Mau Xanh', 'Xe Dap', '500'),
-('D05', 'Dang cho thue', 'Mau Vang', 'Xe Dap', '500')
+values ('D01', N'Đang cho thuê', N'Màu Vàng', N'Xe Đạp', '500'),
+('D02', N'Hỏng', N'Màu Nâu', N'Xe Đạp', '500'),
+('D03', N'Sẵn có', N'Màu Đen', N'Xe Đạp', '500'),
+('M01', N'Đang cho thuê', N'Màu Vàng', N'Xe Máy', '1000'),
+('M02', N'Sẵn có', N'Màu Vàng', N'Xe Máy', '1000'),
+('M03', N'Đang cho thuê', N'Màu Xanh', N'Xe Máy', '1000'),
+('M04', N'Hỏng', N'Màu Vàng', N'Xe Máy', '1000'),
+('M05', N'Đang cho thuê', N'Màu Xanh', N'Xe Máy', '1000'),
+('M06', N'Sẵn có', N'Màu Xanh', N'Xe Máy', '1000'),
+('M07', N'Hỏng', N'Màu Trắng', N'Xe Máy', '1000'),
+('D04', N'Đang cho thuê', N'Màu Xanh', N'Xe Đạp', '500'),
+('D05', N'Đang cho thuê', N'Màu Vàng', N'Xe Đạp', '500')
 
-Insert into THUE (SoDT, MaX, DamBao, NgayThue,GioThue,NgayTra,GioTra)
-values ('0905111', 'D01', 'Tien mat','2021-06-19','12:00:00','2021-06-20','11:30:00'),
-('0905112', 'M01', 'Tien mat','2021-06-18','10:00:00','2021-06-20','09:30:00'),
-('0905113', 'M05', 'The can cuoc','2021-06-17','11:00:00','2021-06-20','11:30:00'),
-('0905114', 'M03', 'Tien mat','2021-06-17','10:00:00','2021-06-20','10:30:00'),
-('0905115', 'D04', 'Tien mat','2021-06-17','13:00:00','2021-06-20','13:30:00'),
-('0905116', 'D05', 'CMT','2021-06-17','14:00:00','2021-06-20','14:30:00')
+Insert into THUE (SoDT, MaX, DamBao, NgayThue,GioThue,NgayTra,GioTra,TinhTrang)
+values ('0905111', 'D01', N'Tiền mặt','2021-06-19','12:00','2021-06-20','11:30',1),
+('0905112', 'M01', N'Tiền mặt','2021-06-18','10:00','2021-06-20','09:30',0),
+('0905113', 'M05', N'Thẻ căn cước','2021-06-17','11:00','2021-06-20','11:30',0),
+('0905114', 'M03', N'Tiền mặt','2021-06-17','10:00','2021-06-20','10:30',1),
+('0905115', 'D04', N'Tiền mặt','2021-06-17','13:00','2021-06-20','13:30',0),
+('0905116', 'D03', N'CMT','2021-06-17','14:00','2021-06-20','14:30',1)
 
+select * from thue
 
 Insert into KHACH
-values ('0905111', 'Nguyen Van A', 'P01'),
-('0905112', 'Nguyen Thi B', 'P02'),
-('0905113', 'Nguyen Tran Van C', 'P03'),
-('0905114', 'Huynh Van D', 'P04'),
-('0905115', 'Huynh Cong E', 'P05'),
-('0905116', 'Ho Nhat F', 'P06'),
-('0905117', 'Ho Van G', 'P07'),
-('0935118', 'Tran Van F', 'P07')
+values ('0905111', N'Nguyễn Văn A', 'P01'),
+('0905112', N'Nguyễn Thị B', 'P02'),
+('0905113', N'Nguyễn Trần Văn C', 'P03'),
+('0905114', N'Huỳnh Văn D', 'P04'),
+('0905115', N'Huỳnh Công E', 'P05'),
+('0905116', N'Hồ Nhật F', 'P06'),
+('0905117', N'Hồ Văn G', 'P07'),
+('0935118', N'Trần Văn F', 'P07')
 
 drop table KHACH
 drop table THUE
@@ -75,30 +77,86 @@ select * from THUE
 select*from KHACH
 
 Update THUE
-Set Thoigianthue = iif(Datediff(day,Ngaythue,Ngaytra)=0,1,
+Set THoigianthue = iif(Datediff(day,Ngaythue,Ngaytra)=0,1,
 datediff(day, Ngaythue,Ngaytra))
 
 Update THUE
-Set ThanhTien=Dongiathue*Thoigianthue
+Set ThanhTien=Dongiathue*THoigianthue
 from THUE inner join XE on
 THUE.MaX=XE.MaX
 
 
-/*
-insert into Thue values 
-(
-	'0905113',
-	'D04',
-	'CMT',
-	'2019-10-25',
-	'12:00',
-	'2019-10-26',
-	'12:00',
-	NULL,
-	NULL
-)*/
 
 
 
 
+insert into THUE (SoDT, MaX, DamBao, NgayThue,GioThue,NgayTra,GioTra,TinhTrang)
+values ('0905111', 'D01', N'Tiền mặt','2021-06-19','12:00','2021-06-20','11:30',1)
 
+CREATE TRIGGER InsertTinhTrangXe on Thue
+FOR Insert
+AS 
+BEGIN
+	declare @MaX varchar(5),@TinhTrangThue nvarchar(50)
+	select @MaX = ins.MaX, @TinhTrangThue = ins.TinhTrang from inserted ins
+	if(@TinhTrangThue = 0)
+	BEGIN
+		update Xe
+		set TinhTrang = N'Đang cho thuê'
+		where MaX = @MaX
+	END
+END
+
+CREATE TRIGGER UpdateTinhTrangXe on Thue
+FOR UPDATE
+AS
+BEGIN
+	declare @MaX varchar(5),@TinhTrangThue nvarchar(50)
+	select @MaX = ins.MaX, @TinhTrangThue = ins.TinhTrang from inserted ins
+	if(@TinhTrangThue = 1)
+	BEGIN
+		update Xe
+		set TinhTrang = N'Sẵn có'
+		where MaX = @MaX
+	END
+END 
+
+CREATE TRIGGER DeleteTinhTrangXe on Thue
+FOR Delete
+AS 
+BEGIN
+	declare @MaX varchar(5),@TinhTrangThue nvarchar(50)
+	select @MaX = del.MaX, @TinhTrangThue = del.TinhTrang from deleted del
+	if(@TinhTrangThue = 1)
+	BEGIN
+		update Xe
+		set TinhTrang = N'Sẵn có'
+		where MaX = @MaX
+	END
+END
+
+select * from thue
+
+select * from xe where Max ='D03'
+
+delete from thue
+where max = 'D03'
+
+select * from xe where Max ='D03'
+
+select max,sum(thanhtien) from thue  group by Max
+
+select XE.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại', NgayThue as 'Ngày thuê', ThanhTien as 'Thành tiền' from Thue right join Xe on Thue.MaX = Xe.MaX where
+Xe.TinhTrang = N'Sẵn có'
+
+create function TimDoanhThu
+(@MaX varchar(5))
+returns INT
+AS
+BEGIN
+	declare @res INT
+	select @res = sum(ThanhTien) from thue where max = @max group by Max
+	RETURN @res
+END
+
+select [dbo].TimDoanhThu('D01')
