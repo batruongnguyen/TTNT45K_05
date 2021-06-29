@@ -44,12 +44,6 @@
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvHD = new System.Windows.Forms.DataGridView();
-            this.Mahd1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Max1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tgthue1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhtien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnThanhTien = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -67,6 +61,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.Mahd1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Max1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgthue1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanhtien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHD)).BeginInit();
@@ -80,7 +80,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(394, 44);
+            this.label1.Location = new System.Drawing.Point(572, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 29);
             this.label1.TabIndex = 0;
@@ -100,7 +100,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(82, 218);
+            this.groupBox2.Location = new System.Drawing.Point(251, 200);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(475, 283);
             this.groupBox2.TabIndex = 1;
@@ -244,7 +244,7 @@
             this.groupBox3.Controls.Add(this.dgvHD);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(82, 517);
+            this.groupBox3.Location = new System.Drawing.Point(251, 499);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(965, 316);
             this.groupBox3.TabIndex = 15;
@@ -274,56 +274,6 @@
             this.dgvHD.TabIndex = 0;
             this.dgvHD.TabStop = false;
             this.dgvHD.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHD_CellMouseClick);
-            // 
-            // Mahd1
-            // 
-            this.Mahd1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Mahd1.DataPropertyName = "MaHD";
-            this.Mahd1.HeaderText = "Mã HĐ";
-            this.Mahd1.Name = "Mahd1";
-            this.Mahd1.ReadOnly = true;
-            this.Mahd1.Width = 103;
-            // 
-            // sdt
-            // 
-            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.sdt.DataPropertyName = "SoDT";
-            this.sdt.HeaderText = "Số điện thoại";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            this.sdt.Width = 106;
-            // 
-            // Max1
-            // 
-            this.Max1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Max1.DataPropertyName = "MaX";
-            this.Max1.HeaderText = "Mã Xe";
-            this.Max1.Name = "Max1";
-            this.Max1.ReadOnly = true;
-            this.Max1.Width = 68;
-            // 
-            // tgthue1
-            // 
-            this.tgthue1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tgthue1.DataPropertyName = "ThoiGianThue";
-            this.tgthue1.HeaderText = "Thời gian thuê";
-            this.tgthue1.Name = "tgthue1";
-            this.tgthue1.ReadOnly = true;
-            // 
-            // thanhtien1
-            // 
-            this.thanhtien1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.thanhtien1.DataPropertyName = "ThanhTien";
-            this.thanhtien1.HeaderText = "Thành tiền";
-            this.thanhtien1.Name = "thanhtien1";
-            this.thanhtien1.ReadOnly = true;
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.HeaderText = "Tình Trạng";
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
             // 
             // btnThanhToan
             // 
@@ -367,7 +317,7 @@
             this.groupBox1.Controls.Add(this.cbbLoaiXe);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(82, 74);
+            this.groupBox1.Location = new System.Drawing.Point(251, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(965, 125);
             this.groupBox1.TabIndex = 0;
@@ -463,7 +413,7 @@
             this.groupBox4.Controls.Add(this.dtNgayTra);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(552, 218);
+            this.groupBox4.Location = new System.Drawing.Point(721, 200);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(495, 283);
             this.groupBox4.TabIndex = 2;
@@ -535,6 +485,54 @@
             this.dtNgayTra.Size = new System.Drawing.Size(259, 31);
             this.dtNgayTra.TabIndex = 9;
             // 
+            // Mahd1
+            // 
+            this.Mahd1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Mahd1.DataPropertyName = "MaHD";
+            this.Mahd1.HeaderText = "Mã HĐ";
+            this.Mahd1.Name = "Mahd1";
+            this.Mahd1.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdt.DataPropertyName = "SoDT";
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // Max1
+            // 
+            this.Max1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Max1.DataPropertyName = "MaX";
+            this.Max1.HeaderText = "Mã Xe";
+            this.Max1.Name = "Max1";
+            this.Max1.ReadOnly = true;
+            // 
+            // tgthue1
+            // 
+            this.tgthue1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tgthue1.DataPropertyName = "ThoiGianThue";
+            this.tgthue1.HeaderText = "Thời gian thuê";
+            this.tgthue1.Name = "tgthue1";
+            this.tgthue1.ReadOnly = true;
+            // 
+            // thanhtien1
+            // 
+            this.thanhtien1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.thanhtien1.DataPropertyName = "ThanhTien";
+            this.thanhtien1.HeaderText = "Thành tiền";
+            this.thanhtien1.Name = "thanhtien1";
+            this.thanhtien1.ReadOnly = true;
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TinhTrang.DataPropertyName = "TinhTrang";
+            this.TinhTrang.HeaderText = "Tình trạng thanh toán";
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.ReadOnly = true;
+            // 
             // frmQuanLyDonThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,7 +540,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1192, 855);
+            this.ClientSize = new System.Drawing.Size(1914, 834);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
@@ -600,12 +598,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtNgayTra;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mahd1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Max1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tgthue1;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn TinhTrang;
-        private System.Windows.Forms.Button btnDelete;
     }
 }

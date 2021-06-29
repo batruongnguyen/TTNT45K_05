@@ -64,6 +64,7 @@ namespace _7_TTNT45K_Nhom05
             connection = new SqlConnection(str);
             connection.Open();
             loaddata();
+            txtDonGia.Enabled = false;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -183,6 +184,8 @@ namespace _7_TTNT45K_Nhom05
             if (cbLoaiXe.SelectedItem.ToString() == "Xe Đạp") txtDonGia.Text = "500";
             else if (cbLoaiXe.SelectedItem.ToString() == "Xe Máy") txtDonGia.Text = "1000";
         }
+
+        
 
          
     }

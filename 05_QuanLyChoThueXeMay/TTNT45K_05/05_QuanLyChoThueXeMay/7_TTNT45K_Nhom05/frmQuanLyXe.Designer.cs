@@ -223,7 +223,7 @@
             this.groupBox1.Controls.Add(this.txtDonGia);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(77, 45);
+            this.groupBox1.Location = new System.Drawing.Point(308, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(741, 294);
             this.groupBox1.TabIndex = 11;
@@ -297,7 +297,7 @@
             this.groupBox2.Controls.Add(this.ThongTinTK);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(77, 345);
+            this.groupBox2.Location = new System.Drawing.Point(308, 345);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(741, 87);
             this.groupBox2.TabIndex = 12;
@@ -337,9 +337,9 @@
             this.groupBox3.Controls.Add(this.dgv);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(77, 438);
+            this.groupBox3.Location = new System.Drawing.Point(308, 438);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(741, 332);
+            this.groupBox3.Size = new System.Drawing.Size(741, 380);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chung";
@@ -371,7 +371,7 @@
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 24;
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(651, 275);
+            this.dgv.Size = new System.Drawing.Size(651, 302);
             this.dgv.TabIndex = 0;
             this.dgv.TabStop = false;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
@@ -417,7 +417,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(325, 9);
+            this.label1.Location = new System.Drawing.Point(586, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 33);
             this.label1.TabIndex = 14;
@@ -428,7 +428,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.Background;
-            this.ClientSize = new System.Drawing.Size(907, 782);
+            this.ClientSize = new System.Drawing.Size(1412, 852);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

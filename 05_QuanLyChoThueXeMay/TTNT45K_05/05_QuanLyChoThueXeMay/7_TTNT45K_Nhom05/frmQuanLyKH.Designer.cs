@@ -105,7 +105,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(415, 32);
+            this.label1.Location = new System.Drawing.Point(738, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(340, 31);
             this.label1.TabIndex = 4;
@@ -126,7 +126,7 @@
             this.groupBox1.Controls.Add(this.btnThemKH);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(175, 66);
+            this.groupBox1.Location = new System.Drawing.Point(498, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(808, 205);
             this.groupBox1.TabIndex = 5;
@@ -249,7 +249,7 @@
             this.groupBox2.Controls.Add(this.btnTimkiemKH);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(175, 277);
+            this.groupBox2.Location = new System.Drawing.Point(498, 290);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(808, 78);
             this.groupBox2.TabIndex = 10;
@@ -274,9 +274,9 @@
             this.groupBox3.Controls.Add(this.dgv1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(175, 368);
+            this.groupBox3.Location = new System.Drawing.Point(498, 381);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(808, 391);
+            this.groupBox3.Size = new System.Drawing.Size(808, 508);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chung";
@@ -293,7 +293,7 @@
             this.DiaChi});
             this.dgv1.Location = new System.Drawing.Point(38, 35);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(728, 350);
+            this.dgv1.Size = new System.Drawing.Size(728, 443);
             this.dgv1.TabIndex = 0;
             this.dgv1.TabStop = false;
             this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
@@ -327,7 +327,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.Background;
-            this.ClientSize = new System.Drawing.Size(1167, 843);
+            this.ClientSize = new System.Drawing.Size(1603, 1015);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
