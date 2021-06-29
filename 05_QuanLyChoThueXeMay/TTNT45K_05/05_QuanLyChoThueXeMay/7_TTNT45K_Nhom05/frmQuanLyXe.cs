@@ -182,6 +182,8 @@ namespace _7_TTNT45K_Nhom05
         {
             if (cbLoaiXe.SelectedItem.ToString() == "Xe Đạp") txtDonGia.Text = "500";
             else if (cbLoaiXe.SelectedItem.ToString() == "Xe Máy") txtDonGia.Text = "1000";
-        }      
+        }
+
+         
     }
 }

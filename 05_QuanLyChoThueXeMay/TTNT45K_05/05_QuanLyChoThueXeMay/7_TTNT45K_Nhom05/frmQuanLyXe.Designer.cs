@@ -85,7 +85,6 @@
             this.cbTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cbTinhTrang.FormattingEnabled = true;
             this.cbTinhTrang.Items.AddRange(new object[] {
-            "Đang cho thuê",
             "Sẵn có",
             "Hỏng"});
             this.cbTinhTrang.Location = new System.Drawing.Point(182, 82);

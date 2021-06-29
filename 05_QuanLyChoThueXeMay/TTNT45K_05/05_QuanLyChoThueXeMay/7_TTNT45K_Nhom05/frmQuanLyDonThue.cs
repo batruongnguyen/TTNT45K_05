@@ -38,7 +38,7 @@ namespace _7_TTNT45K_Nhom05
             }
             catch (Exception ex)
             {
-                MessageBox.Show(sql + "\n"+ex.Message);
+                MessageBox.Show("Lỗi kết nối dữ liệu!", "Thông báo");
             }
             cmn.Close();
         }
@@ -96,6 +96,8 @@ namespace _7_TTNT45K_Nhom05
             string querry3 = "select distinct DonGiaThue from Xe where Loai = N'" + cbbLoaiXe.SelectedItem.ToString() + "'";
             SqlCommand cmd = new SqlCommand(querry3, cmn);
             txtDonGiaThue.Text = cmd.ExecuteScalar().ToString();
+            txtThanhTien.Enabled = false;
+            txtDonGiaThue.Enabled = false;
             cmd.Dispose();
             cmn.Close();
         }
@@ -113,9 +115,10 @@ namespace _7_TTNT45K_Nhom05
                 cbbLoaiXe.Items.Add(i.ToString());
             }
         }
-        //nó không thêm được bạn, có mic kh tui nói cho b dễ hình dung, vô dí đi bạn
+
         private void btnThemDT_Click(object sender, EventArgs e)
         {
+            //Nhập thông tin vào dgv
             if (cbbSDT.SelectedItem == null || cbbMaXe.SelectedItem == null || cbDamBao.SelectedItem == null || dtGioThue.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
@@ -132,9 +135,8 @@ namespace _7_TTNT45K_Nhom05
                     + "' ,'" + NgayThue.ToString("yyyy-MM-dd") + "' , '" + GioThue.ToString("HH:mm:ss")
                     + "', NULL, NULL, NULL, NULL,0)";
                 ExcuteDB(query);
-            }
-            loaddata();
-            
+                loaddata();
+            }         
         }
 
         private void btnThanhTien_Click(object sender, EventArgs e)
@@ -153,10 +155,10 @@ namespace _7_TTNT45K_Nhom05
                 DateTime GioTra = Convert.ToDateTime(dtGioTra.Value);
                 int ThoiGianThue = TGThue();
                 int ThanhTien = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
-                string query = "update Thue set NgayTra = '" + NgayTra.ToString("yyyy-MM-dd")
+                string query1 = "update Thue set NgayTra = '" + NgayTra.ToString("yyyy-MM-dd")
                     + "' , GioTra = '" + GioTra.ToString("HH:mm:ss") + "', ThoiGianThue = " + ThoiGianThue
                     + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
-                ExcuteDB(query);
+                ExcuteDB(query1);
                 loaddata();
             }
         }
@@ -168,16 +170,15 @@ namespace _7_TTNT45K_Nhom05
             DateTime d = Convert.ToDateTime(dtGioThue.Value);
             DateTime f = Convert.ToDateTime(dtGioTra.Value);
 
-            TimeSpan c = b.Subtract(a);
-            TimeSpan span = f.Subtract(d);
-            double TotalMinutes = span.TotalMinutes;
-            if(TotalMinutes>0)
-            {
-                return Convert.ToInt32(c.TotalDays) + 1; 
-            }else
-            {
-                return Convert.ToInt32(c.TotalDays) + 0;
-            }
+            TimeSpan span = b.Subtract(a);
+            TimeSpan span1 = f.Subtract(d);
+            
+            double TotalDays1 = span.TotalDays;
+            //double TotalMinutes1 = span1.TotalHours;
+
+            return Convert.ToInt32(span.TotalDays);
+
+
         }
 
 

@@ -90,9 +90,9 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnShow);
             this.groupBox2.Controls.Add(this.dtGioThue);
             this.groupBox2.Controls.Add(this.cbDamBao);
-            this.groupBox2.Controls.Add(this.btnShow);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.dtNgayThue);
@@ -117,7 +117,7 @@
             this.btnDelete.Location = new System.Drawing.Point(326, 220);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 51);
-            this.btnDelete.TabIndex = 15;
+            this.btnDelete.TabIndex = 8;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -128,7 +128,7 @@
             this.dtGioThue.Location = new System.Drawing.Point(168, 114);
             this.dtGioThue.Name = "dtGioThue";
             this.dtGioThue.Size = new System.Drawing.Size(265, 31);
-            this.dtGioThue.TabIndex = 14;
+            this.dtGioThue.TabIndex = 4;
             // 
             // cbDamBao
             // 
@@ -150,7 +150,7 @@
             this.btnShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnShow.Location = new System.Drawing.Point(85, 221);
+            this.btnShow.Location = new System.Drawing.Point(195, 220);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(89, 51);
             this.btnShow.TabIndex = 7;
@@ -199,7 +199,7 @@
             this.btnThemDT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThemDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThemDT.Location = new System.Drawing.Point(210, 220);
+            this.btnThemDT.Location = new System.Drawing.Point(78, 221);
             this.btnThemDT.Name = "btnThemDT";
             this.btnThemDT.Size = new System.Drawing.Size(84, 51);
             this.btnThemDT.TabIndex = 6;
@@ -335,7 +335,7 @@
             this.btnThanhToan.Location = new System.Drawing.Point(320, 226);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(139, 38);
-            this.btnThanhToan.TabIndex = 11;
+            this.btnThanhToan.TabIndex = 13;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan.UseVisualStyleBackColor = false;
@@ -349,7 +349,7 @@
             this.btnThanhTien.Location = new System.Drawing.Point(37, 226);
             this.btnThanhTien.Name = "btnThanhTien";
             this.btnThanhTien.Size = new System.Drawing.Size(113, 38);
-            this.btnThanhTien.TabIndex = 10;
+            this.btnThanhTien.TabIndex = 12;
             this.btnThanhTien.Text = "Thành tiền";
             this.btnThanhTien.UseVisualStyleBackColor = false;
             this.btnThanhTien.Click += new System.EventHandler(this.btnThanhTien_Click);
@@ -477,7 +477,7 @@
             this.dtGioTra.Location = new System.Drawing.Point(185, 107);
             this.dtGioTra.Name = "dtGioTra";
             this.dtGioTra.Size = new System.Drawing.Size(258, 31);
-            this.dtGioTra.TabIndex = 20;
+            this.dtGioTra.TabIndex = 10;
             // 
             // txtDonGiaThue
             // 
@@ -486,7 +486,7 @@
             this.txtDonGiaThue.Location = new System.Drawing.Point(185, 166);
             this.txtDonGiaThue.Name = "txtDonGiaThue";
             this.txtDonGiaThue.Size = new System.Drawing.Size(258, 35);
-            this.txtDonGiaThue.TabIndex = 9;
+            this.txtDonGiaThue.TabIndex = 11;
             this.txtDonGiaThue.TabStop = false;
             // 
             // label10
@@ -533,7 +533,7 @@
             this.dtNgayTra.Location = new System.Drawing.Point(185, 36);
             this.dtNgayTra.Name = "dtNgayTra";
             this.dtNgayTra.Size = new System.Drawing.Size(259, 31);
-            this.dtNgayTra.TabIndex = 8;
+            this.dtNgayTra.TabIndex = 9;
             // 
             // frmQuanLyDonThue
             // 
