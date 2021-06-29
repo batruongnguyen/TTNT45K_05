@@ -19,10 +19,6 @@ ThoiGianThue int,
 ThanhTien int,
 TinhTrang bit)
 
-/*alter table THUE
-add constraint PK_THUE Primary Key (MaX,SoDT);
-Alter table THUE drop constraint PK_THUE --Xoa lien ket*/
-
 alter Table THUE
 Add constraint FK_XE foreign key (MaX) references XE(MaX)
 
@@ -55,7 +51,6 @@ values ('0905111', 'D01', N'Tiền mặt','2021-06-19','12:00','2021-06-20','11:
 ('0905115', 'D04', N'Tiền mặt','2021-06-17','13:00','2021-06-20','13:30',0),
 ('0905116', 'D03', N'CMT','2021-06-17','14:00','2021-06-20','14:30',1)
 
-select * from thue
 
 Insert into KHACH
 values ('0905111', N'Nguyễn Văn A', 'P01'),
@@ -86,9 +81,9 @@ from THUE inner join XE on
 THUE.MaX=XE.MaX
 
 
-
-
-
+--DELETE FROM THUE WHERE MAhD='1'
+--DBCC CHECKIDENT ('Thue', RESEED,0) 
+--select * from thue
 
 insert into THUE (SoDT, MaX, DamBao, NgayThue,GioThue,NgayTra,GioTra,TinhTrang)
 values ('0905111', 'D01', N'Tiền mặt','2021-06-19','12:00','2021-06-20','11:30',1)

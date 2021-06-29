@@ -160,7 +160,7 @@ namespace _7_TTNT45K_Nhom05
                     + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
                 ExcuteDB(query1);
                 loaddata();
-            }
+            }         
         }
 
         private int TGThue()
@@ -173,10 +173,10 @@ namespace _7_TTNT45K_Nhom05
             TimeSpan span = b.Subtract(a);
             TimeSpan span1 = f.Subtract(d);
             
-            double TotalDays1 = span.TotalDays;
+            double TotalDays1 = span.TotalMinutes;
             //double TotalMinutes1 = span1.TotalHours;
 
-            return Convert.ToInt32(span.TotalDays);
+            return Convert.ToInt32(span.TotalDays) - 1;
 
 
         }
@@ -221,6 +221,12 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnHuyDT_Click(object sender, EventArgs e)
         {
+            cbbLoaiXe.Enabled = true;
+            cbbSDT.Enabled = true;
+            cbbMaXe.Enabled = true;
+            dtGioThue.Enabled = true;
+            dtNgayThue.Enabled = true;
+            cbDamBao.Enabled = true;
             loaddata();
             dtGioThue.Text = "";
             dtNgayThue.Text = "";
@@ -235,9 +241,21 @@ namespace _7_TTNT45K_Nhom05
             txtThanhTien.Text = "";
         }      
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvHD.CurrentCell != null)
+            {
+                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
+                string query = "delete from Thue where MaHD = " + MaHD;
+                ExcuteDB(query);
+                loaddata();
+            }
+        }
+
+        
+
         private void dgvHD_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
             string MaX = "";
             int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
             string query = "select * from Thue where MaHD = ' " + MaHD + "'";
@@ -268,18 +286,15 @@ namespace _7_TTNT45K_Nhom05
                     txtDonGiaThue.Text = j["DonGiaThue"].ToString();
                 }
             }
+            cbbLoaiXe.Enabled = false;
+            cbbSDT.Enabled = false;
+            cbbMaXe.Enabled = false;
+            dtGioThue.Enabled = false;
+            dtNgayThue.Enabled = false;
+            cbDamBao.Enabled = false;
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (dgvHD.CurrentCell != null)
-            {
-                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
-                string query = "delete from Thue where MaHD = " + MaHD;
-                ExcuteDB(query);
-                loaddata();
-            }
-        }
+        
     }
 }
 

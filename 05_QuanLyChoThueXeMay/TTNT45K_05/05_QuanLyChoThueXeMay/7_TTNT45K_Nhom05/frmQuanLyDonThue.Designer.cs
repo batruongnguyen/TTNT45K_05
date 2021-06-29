@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
             this.dtGioThue = new System.Windows.Forms.DateTimePicker();
             this.cbDamBao = new System.Windows.Forms.ComboBox();
-            this.btnShow = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtNgayThue = new System.Windows.Forms.DateTimePicker();
@@ -121,6 +121,20 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnShow.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.reload_icon;
+            this.btnShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnShow.Location = new System.Drawing.Point(195, 220);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(89, 51);
+            this.btnShow.TabIndex = 7;
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnHuyDT_Click);
+            // 
             // dtGioThue
             // 
             this.dtGioThue.CustomFormat = "HH:mm:ss";
@@ -142,20 +156,6 @@
             this.cbDamBao.Name = "cbDamBao";
             this.cbDamBao.Size = new System.Drawing.Size(265, 37);
             this.cbDamBao.TabIndex = 5;
-            // 
-            // btnShow
-            // 
-            this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnShow.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.reload_icon;
-            this.btnShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnShow.Location = new System.Drawing.Point(195, 220);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(89, 51);
-            this.btnShow.TabIndex = 7;
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnHuyDT_Click);
             // 
             // label5
             // 
