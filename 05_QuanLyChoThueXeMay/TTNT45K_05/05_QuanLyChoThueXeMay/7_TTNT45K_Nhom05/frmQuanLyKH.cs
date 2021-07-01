@@ -153,9 +153,11 @@ namespace _7_TTNT45K_Nhom05
         private void dgv1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtSDT.Enabled = false;
-            txtSDT.Text = dgv1.Rows[e.RowIndex].Cells["SoDT"].Value.ToString();
-            txtTen.Text = dgv1.Rows[e.RowIndex].Cells["Ten"].Value.ToString();
-            txtDiachi.Text = dgv1.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
+            int i;
+            i = dgv1.CurrentRow.Index;
+            txtSDT.Text = dgv1.Rows[i].Cells[0].Value.ToString();
+            txtTen.Text = dgv1.Rows[i].Cells[1].Value.ToString();
+            txtDiachi.Text = dgv1.Rows[i].Cells[2].Value.ToString();
         }
 
         private void btnXemlai_Click(object sender, EventArgs e)
