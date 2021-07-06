@@ -29,116 +29,97 @@ namespace _7_TTNT45K_Nhom05
             SqlConnection ThongKe = new SqlConnection(con);
             //Dữ liệu load 
 
-            //Load dữ liệu từ database vào combobox mã xe
-            //cbMaXe.Items.Clear();
-            //ThongKe.Open();
-            //cmd = ThongKe.CreateCommand();
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "Select MaX from XE";
-            //cmd.ExecuteNonQuery();
-            //DataTable dt = new DataTable();
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //da.Fill(dt);
-            //foreach (DataRow dr in dt.Rows)
-            //{
-            //    cbMaXe.Items.Add(dr["MaX"].ToString());
-            //}
-            //ThongKe.Close();
+            //Load dữ liệu từ database vào combobox loại xe
+            cbbLoaiXe.Items.Clear();
+            ThongKe.Open();
+            cmd = ThongKe.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select distinct Loai from XE";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cbbLoaiXe.Items.Add(dr["Loai"].ToString());
+            }
+            ThongKe.Close();
             txtDoanhThu.Enabled = false;
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            SqlConnection Scon = new SqlConnection(con);
+            bool flag = false;
+
+            //Bảng theo loại xe
+            string sql = "select XE.MaX as 'Mã Xe', MoTa as 'Mô tả',  ThanhTien as 'Thành tiền' from Thue right join Xe on Thue.MaX = Xe.MaX where ";
+            // Bảng cho xe đang cho thuê
+            string sql2 = "select Xe.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại', NgayThue as 'Ngày thuê' from Thue right join Xe on Thue.MaX = Xe.MaX where ";
+            //Bảng cho xe hỏng, sẵn có
+            string sql3 = "select MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại' from XE where ";
+
+
+            if (cbTinhTrangXe.Enabled == false)
+            {
+                if (cbbLoaiXe.SelectedIndex != -1)
+                {
+                    sql += "Loai =N'" + cbbLoaiXe.SelectedItem.ToString() + "'";
+                    flag = true;
+                }
+            }
+            else if (cbbLoaiXe.Enabled == false)
+            {
+                if (cbTinhTrangXe.SelectedIndex != -1)
+                {
+                    if (cbTinhTrangXe.SelectedIndex == 0)
+                    {
+                        sql2 += "Xe.TinhTrang =N'" + cbTinhTrangXe.SelectedItem.ToString() + "'";
+                        sql = sql2;
+                    }
+                    else
+                    {
+                        sql3 += "Xe.TinhTrang =N'" + cbTinhTrangXe.SelectedItem.ToString() + "'";
+                        sql = sql3;
+                    }
+                }
+            }
+
             try
             {
-                Scon.Open();
+                SqlConnection cmn = new SqlConnection(con);
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand(sql, cmn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                cmn.Open();
+                da.Fill(dt);
+                cmn.Close();
+
+                dataGridView1.DataSource = dt;
+                if (flag)
+                {
+                    try
+                    {
+                        string querry = "select [dbo].TimDoanhThu(N'" + cbbLoaiXe.SelectedItem.ToString() + "')";
+                        SqlCommand cmd2 = new SqlCommand(querry, cmn);
+                        cmn.Open();
+                        if (cmd2.ExecuteScalar().ToString() != "")
+                            txtDoanhThu.Text = cmd2.ExecuteScalar().ToString();
+                        else
+                            txtDoanhThu.Text = "0";
+                        cmd2.Dispose();
+                        cmn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
-            catch (Exception ex)
+            catch (Exception er)
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+                MessageBox.Show(er.Message);
             }
- 
-            string sql = "select XE.MaX as 'Mã Xe', MoTa as 'Mô tả',  ThanhTien as 'Thành tiền' from Thue right join Xe on Thue.MaX = Xe.MaX where ";
-           
-            if (cbbLoaiXe.Text == "Xe Đạp")
-            {
-                sql += "Loai =N'Xe Đạp'";        
-            }else if (cbbLoaiXe.Text == "Xe Máy")
-            {
-                sql += "Loai =N'Xe Máy'"; 
-            }
-
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, Scon);
-
-            DataSet ds0 = new DataSet();
-
-            adapter.Fill(ds0, "LoaiXe");
-            dataGridView1.DataSource = ds0.Tables["LoaiXe"];
-
-            Scon.Close();
-            
-            
-            
-            //bool flag = false;
-
-            
-
-            
-            //adapter.Fill(ds, "LoaiXe");
-            //dataGridView1.DataSource = ds.Tables["LoaiXe"];
-            //if (cbbLoaiXe.Text == "Xe Đạp")
-            //{
-            //    sql += "Thue.Loai ='" + cbbLoaiXe.SelectedItem.ToString() + "'";
-            //flag = true;
-            //}
-
-            //if (cbTinhTrangXe.Enabled == false)
-            //{
-            //    if (cbbLoaiXe.SelectedIndex != -1)
-            //    {
-            //        sql += "Thue.Loai ='" + cbbLoaiXe.SelectedItem.ToString() + "'";
-            //        flag = true;
-            //    }
-            //}
-            
-            //try
-            //{
-            //    SqlConnection cmn = new SqlConnection(con);
-            //    DataTable dt = new DataTable();
-            //    SqlCommand cmd = new SqlCommand(sql, cmn);
-            //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //    DataSet ds = new DataSet();
-            //    cmn.Open();
-            //    da.Fill(dt);
-            //    cmn.Close();
-
-            //    dataGridView1.DataSource = dt;
-            //    if (flag)
-            //    {
-            //        try
-            //        {
-            //            string querry = "select [dbo].TimDoanhThu('" + cbbLoaiXe.SelectedItem.ToString() + "')";
-            //            SqlCommand cmd2 = new SqlCommand(querry, cmn);
-            //            cmn.Open();
-            //            if (cmd2.ExecuteScalar().ToString() != "")
-            //                txtDoanhThu.Text = cmd2.ExecuteScalar().ToString();
-            //            else
-            //                txtDoanhThu.Text = "0";
-            //            cmd2.Dispose();
-            //            cmn.Close();
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            MessageBox.Show(ex.Message);
-            //        }
-            //    }
-            //}
-            //catch (Exception er)
-            //{
-            //    MessageBox.Show(er.Message);
-            //}
-
         }
 
         private void btnXemLai_Click(object sender, EventArgs e)
@@ -151,14 +132,15 @@ namespace _7_TTNT45K_Nhom05
             dataGridView1.DataSource = null;
         }
 
-        private void cbMaXe_Click(object sender, EventArgs e)
-        {
-            cbTinhTrangXe.Enabled = false;
-        }
-
+        
         private void cbTinhTrangXe_Click(object sender, EventArgs e)
         {
             cbbLoaiXe.Enabled = false;
+        }
+
+        private void cbbLoaiXe_Click(object sender, EventArgs e)
+        {
+            cbTinhTrangXe.Enabled = false;
         }
 
         private void cbTinhTrangXe_SelectedIndexChanged(object sender, EventArgs e)
@@ -168,6 +150,12 @@ namespace _7_TTNT45K_Nhom05
                 txtDoanhThu.Text = "";
             }
         }
+
+       
+
+        
+
+        
 
         
 

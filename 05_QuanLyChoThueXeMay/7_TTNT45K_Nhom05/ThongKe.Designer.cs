@@ -222,6 +222,7 @@
             this.cbbLoaiXe.Name = "cbbLoaiXe";
             this.cbbLoaiXe.Size = new System.Drawing.Size(246, 41);
             this.cbbLoaiXe.TabIndex = 0;
+            this.cbbLoaiXe.Click += new System.EventHandler(this.cbbLoaiXe_Click);
             // 
             // frmThongKe
             // 

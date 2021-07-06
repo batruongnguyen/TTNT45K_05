@@ -63,15 +63,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbbLoaiXe = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.dtGioTra = new System.Windows.Forms.DateTimePicker();
             this.txtDonGiaThue = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnThanhTien = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHD)).BeginInit();
@@ -246,8 +244,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.groupBox3.Controls.Add(this.btnTimKiem);
-            this.groupBox3.Controls.Add(this.txtTimKiem);
             this.groupBox3.Controls.Add(this.dgvHD);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
@@ -295,7 +291,7 @@
             this.dgvHD.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvHD.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvHD.Size = new System.Drawing.Size(929, 253);
+            this.dgvHD.Size = new System.Drawing.Size(929, 280);
             this.dgvHD.TabIndex = 0;
             this.dgvHD.TabStop = false;
             this.dgvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHD_CellClick);
@@ -348,7 +344,7 @@
             this.TinhTrang.HeaderText = "Tình trạng thanh toán";
             this.TinhTrang.Name = "TinhTrang";
             this.TinhTrang.ReadOnly = true;
-            this.TinhTrang.Width = 109;
+            this.TinhTrang.Width = 163;
             // 
             // btnThanhToan
             // 
@@ -464,7 +460,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.btnThanhTien);
             this.groupBox4.Controls.Add(this.dtGioTra);
             this.groupBox4.Controls.Add(this.btnThanhToan);
             this.groupBox4.Controls.Add(this.txtDonGiaThue);
@@ -482,16 +478,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Trả xe";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(24, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(126, 29);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Thành tiền";
-            // 
             // dtGioTra
             // 
             this.dtGioTra.CustomFormat = "HH:mm:ss ";
@@ -500,7 +486,6 @@
             this.dtGioTra.Name = "dtGioTra";
             this.dtGioTra.Size = new System.Drawing.Size(258, 31);
             this.dtGioTra.TabIndex = 10;
-            this.dtGioTra.ValueChanged += new System.EventHandler(this.dtGioTra_ValueChanged);
             // 
             // txtDonGiaThue
             // 
@@ -558,22 +543,18 @@
             this.dtNgayTra.Size = new System.Drawing.Size(259, 31);
             this.dtNgayTra.TabIndex = 9;
             // 
-            // txtTimKiem
+            // btnThanhTien
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(731, 307);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(217, 31);
-            this.txtTimKiem.TabIndex = 2;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnTimKiem.Location = new System.Drawing.Point(588, 307);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(121, 31);
-            this.btnTimKiem.TabIndex = 3;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnThanhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnThanhTien.Location = new System.Drawing.Point(19, 226);
+            this.btnThanhTien.Name = "btnThanhTien";
+            this.btnThanhTien.Size = new System.Drawing.Size(114, 39);
+            this.btnThanhTien.TabIndex = 20;
+            this.btnThanhTien.Text = "Thành tiền";
+            this.btnThanhTien.UseVisualStyleBackColor = false;
+            this.btnThanhTien.Click += new System.EventHandler(this.btnThanhTien_Click);
             // 
             // frmQuanLyDonThue
             // 
@@ -597,7 +578,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHD)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -647,8 +627,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tgthue1;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn TinhTrang;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnThanhTien;
     }
 }

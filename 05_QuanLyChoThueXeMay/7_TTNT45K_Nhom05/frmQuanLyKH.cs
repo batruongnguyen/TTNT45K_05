@@ -21,7 +21,7 @@ namespace _7_TTNT45K_Nhom05
 
         public frmQuanLyKH()
         {
-            InitializeComponent();
+            InitializeComponent();        
         }
 
         void loaddata()

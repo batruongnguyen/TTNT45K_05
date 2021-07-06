@@ -16,6 +16,8 @@ namespace _7_TTNT45K_Nhom05
 
         SqlConnection cmn = new SqlConnection(@"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True");
 
+        
+
         public DataTable GetRecords(string sql)
         {
             DataTable dt = new DataTable();
@@ -46,9 +48,11 @@ namespace _7_TTNT45K_Nhom05
         public frmQuanLyDonThue()
         {
             InitializeComponent();
+            btnThanhToan.Enabled = false;
             loaddata();
             setcbbSDT();
             setcbbLoaiXe();
+            
         }
         public void loaddata()
         {
@@ -130,7 +134,34 @@ namespace _7_TTNT45K_Nhom05
             }         
         }
 
-        
+        private void btnThanhTien_Click(object sender, EventArgs e)
+        {
+            btnThanhToan.Enabled = true;
+            if (txtDonGiaThue.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thông tin đầy đủ!", "Thông báo");
+            }
+            else
+            {
+                int Total = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
+                txtThanhTien.Text = Total.ToString();
+
+                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
+                DateTime NgayTra = Convert.ToDateTime(dtNgayTra.Value);
+                DateTime GioTra = Convert.ToDateTime(dtGioTra.Value);
+
+                int ThoiGianThue = TGThue();
+                int ThanhTien = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
+                string query1 = "update Thue set NgayTra = '" + NgayTra.ToString("yyyy-MM-dd")
+                    + "' , GioTra = '" + GioTra.ToString("HH:mm:ss") + "', ThoiGianThue = " + ThoiGianThue
+                    + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
+                ExcuteDB(query1);
+                loaddata();
+            }
+            dtGioTra.Enabled = false;
+            dtNgayTra.Enabled = false;
+        }
+
         private int TGThue()
         {
             DateTime a = Convert.ToDateTime(dtNgayThue.Value);
@@ -144,12 +175,8 @@ namespace _7_TTNT45K_Nhom05
             double TotalDays1 = span.TotalDays;
             double TotalMinutes1 = span1.TotalMinutes;
 
-            if (TotalDays1 < 0)
-            {
-                MessageBox.Show("Vui lòng chọn lại ngày thuê hoặc ngày trả!", "Thông báo");
-                return Convert.ToInt32(span.TotalDays) - 999;
-            }
-            else if (TotalDays1 == 0)
+
+            if (TotalDays1 == 0)
             {
                 if (TotalMinutes1 > 0)
                 {
@@ -160,21 +187,22 @@ namespace _7_TTNT45K_Nhom05
                     return Convert.ToInt32(span.TotalDays);
                 }
             }
-            else 
+            else
             {
                 if (TotalMinutes1 > 0)
                 {
-                    return Convert.ToInt32(span.TotalDays) + 1; 
+                    return Convert.ToInt32(span.TotalDays) + 1;
                 }
                 else
                 {
                     return Convert.ToInt32(span.TotalDays);
-                }        
-            }                  
-        }
+                }
+            }
+        }              
+        
 
 
-
+        
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
 
@@ -224,6 +252,7 @@ namespace _7_TTNT45K_Nhom05
 
         private void btnHuyDT_Click(object sender, EventArgs e)
         {
+            btnThanhToan.Enabled = true;
             cbbLoaiXe.Enabled = true;
             cbbSDT.Enabled = true;
             cbbMaXe.Enabled = true;
@@ -272,12 +301,19 @@ namespace _7_TTNT45K_Nhom05
                     loaddata();
                 }
             }
-        }
-
-        
+        }        
 
         private void dgvHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (txtThanhTien.Text == "")
+            {
+                btnThanhToan.Enabled = false;
+            }
+            else
+            {
+                btnThanhToan.Enabled = true;
+            }
+            
             string MaX = "";
             int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
             string query = "select * from Thue where MaHD = ' " + MaHD + "'";
@@ -316,54 +352,7 @@ namespace _7_TTNT45K_Nhom05
             cbDamBao.Enabled = false;
             dtNgayTra.Enabled = true;
             dtGioTra.Enabled = true;
-        }
-
-        
-
-        private void dtGioTra_ValueChanged(object sender, EventArgs e)
-        {
-            if (txtDonGiaThue.Text == "")
-            {
-                
-            }
-            else
-            {
-                int Total = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
-                txtThanhTien.Text = Total.ToString();
-
-                int MaHD = Convert.ToInt32(dgvHD.CurrentRow.Cells[0].Value);
-                DateTime NgayTra = Convert.ToDateTime(dtNgayTra.Value);
-                DateTime GioTra = Convert.ToDateTime(dtGioTra.Value);
-
-                int ThoiGianThue = TGThue();
-                int ThanhTien = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
-                string query1 = "update Thue set NgayTra = '" + NgayTra.ToString("yyyy-MM-dd")
-                    + "' , GioTra = '" + GioTra.ToString("HH:mm:ss") + "', ThoiGianThue = " + ThoiGianThue
-                    + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
-                ExcuteDB(query1);
-                loaddata();
-            }
-            dtGioTra.Enabled = false;
-            dtNgayTra.Enabled = false;
-        }
-
-       
-
-        
-
-        
-
-        
-        
-
-        
-        
-
-
-
-        
-
-        
+        }           
     }
 }
 
