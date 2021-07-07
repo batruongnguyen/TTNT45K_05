@@ -52,7 +52,7 @@ namespace _7_TTNT45K_Nhom05
             bool flag = false;
 
             //Bảng theo loại xe
-            string sql = "select XE.MaX as 'Mã Xe', MoTa as 'Mô tả',  ThanhTien as 'Thành tiền' from Thue right join Xe on Thue.MaX = Xe.MaX where ";
+            string sql = "select XE.MaX as 'Mã Xe', MoTa as 'Mô tả',  sum(ThanhTien) as 'Doanh thu'  from Thue right join Xe on Thue.MaX = Xe.MaX where ";
             // Bảng cho xe đang cho thuê
             string sql2 = "select Xe.MaX as 'Mã xe', MoTa as 'Mô tả', Loai as 'Loại', NgayThue as 'Ngày thuê' from Thue right join Xe on Thue.MaX = Xe.MaX where ";
             //Bảng cho xe hỏng, sẵn có
@@ -63,7 +63,7 @@ namespace _7_TTNT45K_Nhom05
             {
                 if (cbbLoaiXe.SelectedIndex != -1)
                 {
-                    sql += "Loai =N'" + cbbLoaiXe.SelectedItem.ToString() + "'";
+                    sql += "Loai =N'" + cbbLoaiXe.SelectedItem.ToString() + "'group by XE.MaX, mota";
                     flag = true;
                 }
             }

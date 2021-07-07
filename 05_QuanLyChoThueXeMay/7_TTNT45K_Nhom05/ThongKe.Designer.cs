@@ -82,7 +82,7 @@
             "Đang cho thuê",
             "Sẵn có",
             "Hỏng"});
-            this.cbTinhTrangXe.Location = new System.Drawing.Point(240, 120);
+            this.cbTinhTrangXe.Location = new System.Drawing.Point(262, 118);
             this.cbTinhTrangXe.Name = "cbTinhTrangXe";
             this.cbTinhTrangXe.Size = new System.Drawing.Size(246, 39);
             this.cbTinhTrangXe.TabIndex = 1;
@@ -96,7 +96,7 @@
             this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThongKe.Location = new System.Drawing.Point(531, 74);
+            this.btnThongKe.Location = new System.Drawing.Point(553, 72);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(74, 54);
             this.btnThongKe.TabIndex = 2;
@@ -140,7 +140,7 @@
             this.btnXemLai.BackgroundImage = global::_7_TTNT45K_Nhom05.Properties.Resources.reload_icon;
             this.btnXemLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXemLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemLai.Location = new System.Drawing.Point(531, 147);
+            this.btnXemLai.Location = new System.Drawing.Point(553, 145);
             this.btnXemLai.Name = "btnXemLai";
             this.btnXemLai.Size = new System.Drawing.Size(74, 50);
             this.btnXemLai.TabIndex = 3;
@@ -155,15 +155,15 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label5.Location = new System.Drawing.Point(48, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 31);
+            this.label5.Size = new System.Drawing.Size(203, 31);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Doanh thu";
+            this.label5.Text = "Tổng doanh thu";
             // 
             // txtDoanhThu
             // 
             this.txtDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtDoanhThu.Location = new System.Drawing.Point(240, 187);
+            this.txtDoanhThu.Location = new System.Drawing.Point(262, 185);
             this.txtDoanhThu.Name = "txtDoanhThu";
             this.txtDoanhThu.Size = new System.Drawing.Size(246, 38);
             this.txtDoanhThu.TabIndex = 11;
@@ -218,7 +218,7 @@
             this.cbbLoaiXe.Items.AddRange(new object[] {
             "Xe Máy",
             "Xe Đạp"});
-            this.cbbLoaiXe.Location = new System.Drawing.Point(240, 61);
+            this.cbbLoaiXe.Location = new System.Drawing.Point(262, 59);
             this.cbbLoaiXe.Name = "cbbLoaiXe";
             this.cbbLoaiXe.Size = new System.Drawing.Size(246, 41);
             this.cbbLoaiXe.TabIndex = 0;

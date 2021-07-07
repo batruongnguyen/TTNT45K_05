@@ -63,11 +63,6 @@ select*from XE
 select * from THUE 
 select*from KHACH
 
-
-
-
-
-
 -- TRIGGER INSERT
 CREATE TRIGGER InsertTinhTrangXe on Thue
 FOR Insert
@@ -124,6 +119,7 @@ BEGIN
 	select @res = sum(ThanhTien) from thue inner join xe on THUE.MaX=XE.MaX where Loai = @Loai group by Loai
 	RETURN @res
 END
+
 
 
 

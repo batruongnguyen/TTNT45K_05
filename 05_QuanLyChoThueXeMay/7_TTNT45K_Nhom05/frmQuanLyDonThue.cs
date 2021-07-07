@@ -151,10 +151,9 @@ namespace _7_TTNT45K_Nhom05
                 DateTime GioTra = Convert.ToDateTime(dtGioTra.Value);
 
                 int ThoiGianThue = TGThue();
-                int ThanhTien = Convert.ToInt32(txtDonGiaThue.Text) * TGThue();
                 string query1 = "update Thue set NgayTra = '" + NgayTra.ToString("yyyy-MM-dd")
                     + "' , GioTra = '" + GioTra.ToString("HH:mm:ss") + "', ThoiGianThue = " + ThoiGianThue
-                    + ", ThanhTien = " + ThanhTien + "where MaHD = " + MaHD;
+                    + ", ThanhTien = " + Total + "where MaHD = " + MaHD;
                 ExcuteDB(query1);
                 loaddata();
             }
@@ -187,7 +186,7 @@ namespace _7_TTNT45K_Nhom05
                     return Convert.ToInt32(span.TotalDays);
                 }
             }
-            else
+            else if (TotalDays1 > 0)
             {
                 if (TotalMinutes1 > 0)
                 {
@@ -197,8 +196,12 @@ namespace _7_TTNT45K_Nhom05
                 {
                     return Convert.ToInt32(span.TotalDays);
                 }
+            } else
+            {
+                MessageBox.Show("Mời nhập lại ngày thuê hoặc ngày trả!", "Thông báo");
+                return 0;
             }
-        }              
+        }                      
         
 
 
